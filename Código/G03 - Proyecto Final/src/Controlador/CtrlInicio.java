@@ -4,6 +4,7 @@ package Controlador;
 import Modelo.Archivo;
 import Modelo.ArregloCuentas;
 import Vista.FrmInicio;
+import Vista.FrmRegistro;
 //import Vista.FrmPaquetes;
 //import Vista.FrmPerfiles;
 //import Vista.FrmRegistro;
@@ -117,9 +118,9 @@ public class CtrlInicio {
             public void actionPerformed(ActionEvent ae) {
                 vista.dispose();
                 
-                //FrmRegistro fRegistro = new FrmRegistro();
-                //CtrlRegistro ctrlRegistro = new CtrlRegistro(modelo, fRegistro);
-                //ctrlRegistro.init();
+                FrmRegistro fRegistro = new FrmRegistro();
+                CtrlRegistro ctrlRegistro = new CtrlRegistro(modelo, fRegistro);
+                ctrlRegistro.init();
             }
         });
 
