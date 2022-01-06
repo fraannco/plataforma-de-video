@@ -12,6 +12,7 @@ public class Cuenta implements Serializable {
     private Suscripcion suscripcion;
     private Tarjeta tarjeta;
     private Boolean sesion;
+    private ArregloVisualizaciones visualizaciones;
     private int numeroPantallasActuales;
 
     /*===========
@@ -56,6 +57,16 @@ public class Cuenta implements Serializable {
     public void setSesion(Boolean sesion) {
         this.sesion = sesion;
     }
+
+    public ArregloVisualizaciones getVisualizaciones() {
+        return visualizaciones;
+    }
+
+    public void setVisualizaciones(ArregloVisualizaciones visualizaciones) {
+        this.visualizaciones = visualizaciones;
+    }
+    
+    //Metodos
 
     public boolean cobrar() {
         float saldo = this.tarjeta.getSaldo();

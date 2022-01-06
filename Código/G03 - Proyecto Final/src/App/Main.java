@@ -64,7 +64,7 @@ public class Main {
                 /*ESTADO DE VISUALIZACION*/ false,
                 /*DURACION*/ 106,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 1, "src\\Imagenes\\Peliculas\\whiplash.png", "src\\Video\\Peliculas\\whiplash.mp4");
+                /*CODIGO*/ 1, "src\\Imagenes\\Peliculas\\whiplash.png", "src\\Peliculas\\whiplash.mp4");
         
         Multimedia.catalogoPeliculas.agregarPelicula(p1);
 
@@ -78,7 +78,7 @@ public class Main {
                 /*ESTADO DE VISUALIZACION*/ false,
                 /*DURACION*/ 106,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 2, "src\\Imagenes\\Peliculas\\deadpool.png", "src\\Video\\Peliculas\\deadpool.mp4");
+                /*CODIGO*/ 2, "src\\Imagenes\\Peliculas\\deadpool.png", "src\\Peliculas\\deadpool.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p2);
 
@@ -94,7 +94,7 @@ public class Main {
                 /*ESTADO DE VISUALIZACION*/ false,
                 /*DURACION*/ 125,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 3, "src\\Imagenes\\Peliculas\\El viaje de Chihiro.jpg", "src\\Video\\Peliculas\\El viaje de Chihiro.mp4");
+                /*CODIGO*/ 3, "src\\Imagenes\\Peliculas\\El viaje de Chihiro.jpg", "src\\Peliculas\\El viaje de Chihiro.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p3);
 
@@ -112,7 +112,7 @@ public class Main {
                 /*ESTADO DE VISUALIZACION*/ false,
                 /*DURACION*/ 117,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 4, "src\\Imagenes\\Peliculas\\fragmentando.jpg", "src\\Video\\Peliculas\\fragmentando.mp4");
+                /*CODIGO*/ 4, "src\\Imagenes\\Peliculas\\fragmentando.jpg", "src\\Peliculas\\fragmentando.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p4);
 
@@ -128,7 +128,7 @@ public class Main {
                 /*ESTADO DE VISUALIZACION*/ false,
                 /*DURACION*/ 89,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 5, "src\\Imagenes\\Peliculas\\La tumba de las luciérnagas.jpg", "src\\Video\\Peliculas\\La tumba de las luciérnagas.mp4");
+                /*CODIGO*/ 5, "src\\Imagenes\\Peliculas\\La tumba de las luciérnagas.jpg", "src\\Peliculas\\La tumba de las luciérnagas.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p5);
 
@@ -146,7 +146,7 @@ public class Main {
                 /*ESTADO DE VISUALIZACION*/ false,
                 /*DURACION*/ 46,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 6, "src\\Imagenes\\Peliculas\\El jardín de las palabras.jpg", "src\\Video\\Peliculas\\El jardín de las palabras.mp4");
+                /*CODIGO*/ 6, "src\\Imagenes\\Peliculas\\El jardín de las palabras.jpg", "src\\Peliculas\\El jardín de las palabras.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p6);
 
@@ -163,7 +163,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/122, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/7,"src\\Imagenes\\Peliculas\\El exorcista.jpg", "src\\Video\\Peliculas\\El exorcista.mp4");
+                                    /*CODIGO*/7,"src\\Imagenes\\Peliculas\\El exorcista.jpg", "src\\Peliculas\\El exorcista.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p7);
         
@@ -181,7 +181,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/84, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/8,"src\\Imagenes\\Peliculas\\El cuaderno de Tomy.jpg", "src\\Video\\Peliculas\\El cuaderno de Tomy.mp4");
+                                    /*CODIGO*/8,"src\\Imagenes\\Peliculas\\El cuaderno de Tomy.jpg", "src\\Peliculas\\El cuaderno de Tomy.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p8);
         
@@ -199,7 +199,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/86, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/9,"src\\Imagenes\\Peliculas\\El proyecto de la bruja de Blair.jpg", "src\\Video\\Peliculas\\El proyecto de la bruja de Blair.mp4");
+                                    /*CODIGO*/9,"src\\Imagenes\\Peliculas\\El proyecto de la bruja de Blair.jpg", "src\\Peliculas\\El proyecto de la bruja de Blair.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p9);
         
@@ -216,7 +216,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/46, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/10,"src\\Imagenes\\Peliculas\\El rey león.jpg", "src\\Video\\Peliculas\\El rey león.mp4");
+                                    /*CODIGO*/10,"src\\Imagenes\\Peliculas\\El rey león.jpg", "src\\Peliculas\\El rey león.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p10);
 
@@ -234,7 +234,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/88, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/11,"src\\Imagenes\\Peliculas\\Scary Movie.jpg", "src\\Video\\Peliculas\\Scary Movie.mp4");
+                                    /*CODIGO*/11,"src\\Imagenes\\Peliculas\\Scary Movie.jpg", "src\\Peliculas\\Scary Movie.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p11);
         
@@ -252,7 +252,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/103, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/12,"src\\Imagenes\\Peliculas\\Bob Esponja al rescate.jpg", "src\\Video\\Peliculas\\Bob Esponja - al rescate.mp4");
+                                    /*CODIGO*/12,"src\\Imagenes\\Peliculas\\Bob Esponja al rescate.jpg", "src\\Peliculas\\Bob Esponja - al rescate.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p12);
         
@@ -269,7 +269,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/22, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/13,"src\\Imagenes\\Peliculas\\Scooby.jpg", "src\\Video\\Peliculas\\¡Scooby!.mp4");
+                                    /*CODIGO*/13,"src\\Imagenes\\Peliculas\\Scooby.jpg", "src\\Peliculas\\¡Scooby!.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p13);
         
@@ -287,7 +287,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/111, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/14,"src\\Imagenes\\Peliculas\\Juego del miedo.jpg", "src\\Video\\Peliculas\\Juego del miedo.mp4");
+                                    /*CODIGO*/14,"src\\Imagenes\\Peliculas\\Juego del miedo.jpg", "src\\Peliculas\\Juego del miedo.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p14);
         
@@ -304,7 +304,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/86, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/15,"src\\Imagenes\\Peliculas\\Juegos demoníacos.jpg", "src\\Video\\Peliculas\\Juegos demoníacos.mp4");
+                                    /*CODIGO*/15,"src\\Imagenes\\Peliculas\\Juegos demoníacos.jpg", "src\\Peliculas\\Juegos demoníacos.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p15);
         
@@ -321,7 +321,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/60, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/16,"src\\Imagenes\\Peliculas\\Losing Alice.jpg", "src\\Video\\Peliculas\\Losing Alice.mp4");
+                                    /*CODIGO*/16,"src\\Imagenes\\Peliculas\\Losing Alice.jpg", "src\\Peliculas\\Losing Alice.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p16);
         
@@ -339,7 +339,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/93, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/17,"src\\Imagenes\\Peliculas\\Siempre a tu lado.jpg", "src\\Video\\Peliculas\\Siempre a tu lado.mp4");
+                                    /*CODIGO*/17,"src\\Imagenes\\Peliculas\\Siempre a tu lado.jpg", "src\\Peliculas\\Siempre a tu lado.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p17);
         
@@ -359,7 +359,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/117, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/18,"src\\Imagenes\\Peliculas\\En busca de la felicidad.jpg", "src\\Video\\Peliculas\\En busca de la felicidad.mp4");
+                                    /*CODIGO*/18,"src\\Imagenes\\Peliculas\\En busca de la felicidad.jpg", "src\\Peliculas\\En busca de la felicidad.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p18);
         
@@ -377,7 +377,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/142, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/19,"src\\Imagenes\\Peliculas\\Forrest Gump.jpg", "src\\Video\\Peliculas\\Forrest Gump.mp4");
+                                    /*CODIGO*/19,"src\\Imagenes\\Peliculas\\Forrest Gump.jpg", "src\\Peliculas\\Forrest Gump.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p19);
         
@@ -394,7 +394,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/64, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/20,"src\\Imagenes\\Peliculas\\5 centímetros por segundo.jpg", "src\\Video\\Peliculas\\5 centímetros por segundo.mp4");
+                                    /*CODIGO*/20,"src\\Imagenes\\Peliculas\\5 centímetros por segundo.jpg", "src\\Peliculas\\5 centímetros por segundo.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p20);
         
@@ -412,7 +412,7 @@ public class Main {
                                     /*ESTADO DE VISUALIZACION*/false, 
                                     /*DURACION*/91, 
                                     /*MINUTOS REPRODUCIDOS*/0,
-                                    /*CODIGO*/21,"src\\Imagenes\\Peliculas\\Pesadilla en Elm Street.jpg", "src\\Video\\Peliculas\\Pesadilla en Elm Street.mp4");
+                                    /*CODIGO*/21,"src\\Imagenes\\Peliculas\\Pesadilla en Elm Street.jpg", "src\\Peliculas\\Pesadilla en Elm Street.mp4");
         
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p21);
         
@@ -439,6 +439,7 @@ public class Main {
 
         //SERIALZIANDO
         Cuentas = (ArregloCuentas) archivo.deserializar(Archivo.archivoArregloCuentas);
+        
         
         FrmInicio frmInicio = new FrmInicio();
         CtrlInicio ctrlInicio = new CtrlInicio(Cuentas, frmInicio);

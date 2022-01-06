@@ -131,6 +131,7 @@ public class ArregloCuentas implements Serializable {
     }
 
     public boolean verificarEstadoSesion(String Correo) {
+        System.out.println("AAAA");
         boolean r = Boolean.FALSE;
         for (Cuenta c : cuentas) {
             if (c.getUsuario().getCorreo().equals(Correo)) {
@@ -161,7 +162,25 @@ public class ArregloCuentas implements Serializable {
         }
         return cuentaAux;
     }
+    
+    public Cuenta cuentaActiva2() throws Exception{
 
+        Cuenta cuentaAux = new Cuenta();
+        Boolean s = true;
+        for (Cuenta c : cuentas) {
+            if (c.getSesion()) {
+                cuentaAux = c;
+                s = false;
+                break;
+            }
+        }
+
+        if (s == true) {
+            throw new Exception("NO EXISTE UN USUARIO ACTIVO");
+        }
+        return cuentaAux;
+    }
+    
     public void inactivarSesión(Cuenta cuenta) {
         cuenta.setSesion(!cuenta.getSesion());
 
