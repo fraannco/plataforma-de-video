@@ -84,7 +84,6 @@ public class CtrlReproductor {
                 vista.hide();
                 FrmCatalogo fCatalogo = new FrmCatalogo();
                 CtrlCatalogo ctrlCatalogo = new CtrlCatalogo(aCuenta, fCatalogo);
-                //                    ctrlCatalogo.setVideosRecomendados(videosRecomendados);
 
                 //CAPTAMOS LA PELICULA QUE SE ESTA REPRODUCIENDO
                 try {

@@ -92,7 +92,7 @@ public class ArregloVisualizaciones implements Serializable {
         return a;
     }
 
-    public int BuscarPeliPorCodigo(String nomP) {
+    public int buscarPorTituloPeliPorCodigo(String nomP) {
         int a = -1;
         for (Visualizacion vs : v) {
             if (vs.getVideo().getTitulo().equals(nomP)) {
@@ -117,7 +117,6 @@ public class ArregloVisualizaciones implements Serializable {
         for (Visualizacion vs : v) {
             if (vs.getVideo().isReproduciendo()) {
                 a = vs.getVideo();
-
             }
         }
         return a;
@@ -129,6 +128,16 @@ public class ArregloVisualizaciones implements Serializable {
             if(vs.getVideo().getTitulo().equals(titulo)){
                 System.out.println("TITULO: "+vs.getVideo().getTitulo());
                 a=true;
+            }
+        }
+        return a;
+    }
+    
+    public Visualizacion buscarVisualizacion(String titulo){
+        Visualizacion a = null;
+        for(Visualizacion vs: v){
+            if(vs.getVideo().getTitulo().equals(titulo)){
+                a = vs;
             }
         }
         return a;

@@ -204,12 +204,13 @@ public class CtrlCatalogo {
                 }
 
                 //SINOPSIS
-                //vista.dispose();
-                //FrmInformacionVideo fInfo = new FrmInformacionVideo();
-                //CtrlInformacionVideo cInfo = new CtrlInformacionVideo(fInfo, modelo);
-                //cInfo.setVideo(videoSeleccionado);
-                //cInfo.setCorreo(auxCorreo);
-                //cInfo.init();
+                JOptionPane.showMessageDialog(vista,
+                        "Titulo: " + Multimedia.catalogoPeliculas.getPelicula(indexPrincipal).getTitulo() + "\n"
+                        + "Sinopsis: " + Multimedia.catalogoPeliculas.getPelicula(indexPrincipal).getSinopsis() + "\n"
+                        + "Duración: " + Multimedia.catalogoPeliculas.getPelicula(indexPrincipal).getDuracion() + " minutos" + "\n"
+                        + "Año: " + Multimedia.catalogoPeliculas.getPelicula(indexPrincipal).getAnio() + "\n"
+                        + "Director: " + Multimedia.catalogoPeliculas.getPelicula(indexPrincipal).getDirector() + "\n"
+                        + "Genero: " + Multimedia.catalogoPeliculas.getPelicula(indexPrincipal).getGenero() + "\n");
             }
         });
         this.vista.btnPrincipal.addActionListener(new ActionListener() {
@@ -233,28 +234,38 @@ public class CtrlCatalogo {
 
                     Pelicula p = new Pelicula();
                     p = Multimedia.catalogoPeliculas.getPelicula(indexPrincipal);
-                    System.out.println("DURACION PELICULA A AGREGAR: " + p.getDuracion());
+                    //System.out.println("DURACION PELICULA A AGREGAR: " + p.getDuracion());
                     p.setReproduciendo(true);
 
-                    if (modelo.cuentaActiva2().getVisualizaciones().buscarPorTitulo(p.getTitulo()) == false) {
-                        p.setCant_Visualizaciones(1);
+                    /*if (modelo.cuentaActiva2().getVisualizaciones().buscarPorTitulo(p.getTitulo()) == false) {
+                        //p.setCant_Visualizaciones(1);
                         modelo.cuentaActiva2().getVisualizaciones().agregarVisulizacion(new Visualizacion(p));
-                        System.out.println("AAAAAAAAAAA");
-                        System.out.println(p.getCant_Visualizaciones());
                     } else {
-                        int cv = modelo.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).getCant_Visualizaciones();
-                        modelo.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).setCant_Visualizaciones(cv);
-                        System.out.println("CANTIDAD DE VISUALIZACIONES DE "+p.getTitulo()+": "+p.getCant_Visualizaciones());
-                        System.out.println("SALIENDO de BTNPRINCIPAL");
+                        System.out.println("ENTRANDO A BTNPRINCIPAL");
+                        //int cv = modelo.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).getCant_Visualizaciones();
+                        //modelo.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).setCant_Visualizaciones(cv);
+                        //System.out.println("CANTIDAD DE VISUALIZACIONES DE " + p.getTitulo() + ": " + p.getCant_Visualizaciones());
+                        //System.out.println(modelo.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).getCant_Visualizaciones());
+                        //System.out.println("SALIENDO de BTNPRINCIPAL");
+                        
+                    }*/
+                    if(!modelo.cuentaActiva2().getVisualizaciones().buscarPorTitulo(p.getTitulo())){
+                        System.out.println("dentro del if xd");
+                        modelo.cuentaActiva2().getVisualizaciones().agregarVisulizacion(new Visualizacion(p,1));
+                    }else {
+                        modelo.cuentaActiva2().getVisualizaciones().buscarVisualizacion(p.getTitulo()).aumentarVisualizacion();
+                        Multimedia.catalogoVideos.ver(indiceEnArregloVideos);
                     }
-
+                    
+                    System.out.println("Se agregara: "+p.getTitulo()+" con "+modelo.cuentaActiva2().getVisualizaciones().buscarVisualizacion(p.getTitulo()).getVecesVisto()+" visualizaciones");
+                    
                     Archivo archivo = new Archivo();
                     vista.dispose();
                     archivo.serializar(Archivo.archivoArregloCuentas, modelo);
 
                     //MOSTRANDO PELICULA
                     cRep = new CtrlReproductor(rep, fRep, v, modelo);
-                    Multimedia.catalogoVideos.ver(indiceEnArregloVideos);
+                    
                     cRep.init();
                     vista.dispose();
                 } catch (Exception ex) {
@@ -344,7 +355,6 @@ public class CtrlCatalogo {
                     FrmReproductor fRep = new FrmReproductor();
                     CtrlReproductor cRep;
 
-                    
                     Archivo archivo = new Archivo();
                     archivo.serializar(Archivo.archivoArregloCuentas, modelo);
                     Multimedia.catalogoVideos.ver(indiceEnArregloVideos);
