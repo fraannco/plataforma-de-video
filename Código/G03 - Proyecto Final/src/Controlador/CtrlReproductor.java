@@ -101,6 +101,7 @@ public class CtrlReproductor {
                         int tv = rand + vAux.getTiempoVisto();
                         aCuenta.cuentaActiva2().getVisualizaciones().reproduciendo().setTiempoVisto(tv);
                         aCuenta.cuentaActiva2().getVisualizaciones().reproduciendo().setReproduciendo(false);
+                        System.out.println("aaaaaaaaaaaaa");
                     }
 
                     aCuenta.cuentaActiva2().getVisualizaciones().mostrarContenido();

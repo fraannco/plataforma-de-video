@@ -1,4 +1,3 @@
-
 package Modelo;
 
 import java.io.Serializable;
@@ -121,29 +120,29 @@ public class ArregloVisualizaciones implements Serializable {
         }
         return a;
     }
-    
-    public Boolean buscarPorTitulo(String titulo){
-        Boolean a=false;
-        for(Visualizacion vs: v){
-            if(vs.getVideo().getTitulo().equals(titulo)){
-                System.out.println("TITULO: "+vs.getVideo().getTitulo());
-                a=true;
+
+    public Boolean buscarPorTitulo(String titulo) {
+        Boolean a = false;
+        for (Visualizacion vs : v) {
+            if (vs.getVideo().getTitulo().equals(titulo)) {
+                System.out.println("TITULO: " + vs.getVideo().getTitulo());
+                a = true;
             }
         }
         return a;
     }
-    
-    public Visualizacion buscarVisualizacion(String titulo){
+
+    public Visualizacion buscarVisualizacion(String titulo) {
         Visualizacion a = null;
-        for(Visualizacion vs: v){
-            if(vs.getVideo().getTitulo().equals(titulo)){
+        for (Visualizacion vs : v) {
+            if (vs.getVideo().getTitulo().equals(titulo)) {
                 a = vs;
             }
         }
         return a;
     }
-    
-    public String generoMasVisto(){
+
+    public String generoMasVisto() {
 
         String genero = "";
         int t = 0, tV = 0;
@@ -233,7 +232,6 @@ public class ArregloVisualizaciones implements Serializable {
         return VideoDrama;
     }
 
-
     public void mostrarContenido() {
         for (Visualizacion vs : v) {
             System.out.println("====================================");
@@ -254,9 +252,9 @@ public class ArregloVisualizaciones implements Serializable {
             }
         }
     }
-    
-    public void ordenaVectorVisualizaciones(){
-        for(int i=0;i<v.length;i++){
+
+    public void ordenaVectorVisualizaciones() {
+        /*for(int i=0;i<v.length;i++){
             for(int j=i+1;j<v.length-1;j++){
                 if(v[j].getVideo().getTiempoVisto()<v[j+1].getVideo().getTiempoVisto()){
                     Visualizacion aux = v[j];
@@ -264,44 +262,59 @@ public class ArregloVisualizaciones implements Serializable {
                     v[j+1]=aux;
                 }
             }
+        }*/
+        int i, j, pos, menor;
+        Visualizacion tmp;
+        for (i = 0; i < v.length - 1; i++) {                        // tomamos como menor el primero
+            menor = v[i].getVideo().getTiempoVisto();             // de los elementos que quedan por ordenar                    
+            pos = i;                                              // y guardamos su posición
+            for (j = i + 1; j < v.length; j++) {                   // buscamos en el resto
+                if (v[j].getVideo().getTiempoVisto() > menor) { // del array algún elemento
+                    menor = v[j].getVideo().getTiempoVisto();   // menor que el actual
+                    pos = j;
+                }
+            }
+            if (pos != i) { // si hay alguno menor se intercambia                         
+                tmp = v[i];
+                v[i] = v[pos];
+                v[pos] = tmp;
+            }
         }
     }
-    
-    
-    public String mostrarTop(){
+
+    public String mostrarTop() {
         String top = "";
         //String aux;
-        int i=0;
-        for(Visualizacion vs: v){
+        int i = 0;
+        for (Visualizacion vs : v) {
             //aux = vs.getVideo().getTitulo();
-            top = "<html>"+"<p>"+top+(i+1)+". "+vs.getVideo().getTitulo()+"\n"+"<p>"+"<html>";
+            top = top + (i + 1) + ". " + vs.getVideo().getTitulo() + "\n";
             i++;
         }
         return top;
     }
-    
-    public Video buscarVideoEnArray(String Titulo){
+
+    public Video buscarVideoEnArray(String Titulo) {
         Video videoAux = new Video();
-        for(Visualizacion vs: v){
-            if(vs.getVideo().getTitulo().equals(Titulo)){
+        for (Visualizacion vs : v) {
+            if (vs.getVideo().getTitulo().equals(Titulo)) {
                 videoAux = vs.getVideo();
             }
         }
         return videoAux;
     }
-    
-    public int validarNroTop(){
-        int i=0;
-        String a="";
-        for(Visualizacion vs: v){
-            if(vs.getVideo().getTitulo().equals(a)){
-                a = vs.getVideo().getTitulo();  
-            }else{
+
+    public int validarNroTop() {
+        int i = 0;
+        String a = "";
+        for (Visualizacion vs : v) {
+            if (vs.getVideo().getTitulo().equals(a)) {
+                a = vs.getVideo().getTitulo();
+            } else {
                 i++;
-                System.out.println("Valor de i = "+i);
+                System.out.println("Valor de i = " + i);
             }
         }
         return i;
     }
 }
-

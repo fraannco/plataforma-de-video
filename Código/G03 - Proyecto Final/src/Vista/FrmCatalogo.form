@@ -154,33 +154,35 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                               <Component id="lblPelicula" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="btnIzquierda" pref="67" max="32767" attributes="0"/>
-                              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnTerIzq" pref="145" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="btnSecIzq" pref="145" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="2" attributes="0">
-                                  <Component id="btnInformación" alignment="1" min="-2" pref="177" max="-2" attributes="0"/>
-                                  <Component id="btnPrincipal" alignment="2" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="btnInformación" min="-2" pref="177" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="btnIzquierda" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnTerIzq" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnSecIzq" min="-2" pref="130" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnPrincipal" min="-2" pref="177" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnSecDer" pref="145" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnTerDer" pref="145" max="32767" attributes="0"/>
-                              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnDerecha" pref="80" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="btnSecDer" min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="btnTerDer" min="-2" pref="120" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnDerecha" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -189,19 +191,19 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Component id="lblPelicula" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="btnTerIzq" alignment="2" pref="157" max="32767" attributes="0"/>
-                          <Component id="btnSecIzq" alignment="2" pref="157" max="32767" attributes="0"/>
-                          <Component id="btnPrincipal" alignment="2" pref="157" max="32767" attributes="0"/>
-                          <Component id="btnSecDer" alignment="2" pref="157" max="32767" attributes="0"/>
-                          <Component id="btnTerDer" alignment="2" pref="157" max="32767" attributes="0"/>
-                          <Component id="btnDerecha" alignment="2" pref="157" max="32767" attributes="0"/>
-                          <Component id="btnIzquierda" alignment="2" pref="157" max="32767" attributes="0"/>
+                          <Component id="btnTerIzq" alignment="2" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="btnSecIzq" alignment="2" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="btnPrincipal" alignment="2" min="-2" pref="157" max="-2" attributes="0"/>
+                          <Component id="btnSecDer" alignment="2" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="btnTerDer" alignment="2" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="btnDerecha" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnIzquierda" alignment="2" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnInformación" min="-2" pref="38" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -209,15 +211,7 @@
           <SubComponents>
             <Component class="javax.swing.JToggleButton" name="btnDerecha">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Botones/derecha.png"/>
-                </Property>
+                <Property name="text" type="java.lang.String" value="Siguiente"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDerechaActionPerformed"/>
@@ -264,10 +258,7 @@
             </Component>
             <Component class="javax.swing.JToggleButton" name="btnIzquierda">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Botones/izquierda.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="&lt;---"/>
+                <Property name="text" type="java.lang.String" value="Anterior"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
