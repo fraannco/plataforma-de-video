@@ -32,7 +32,6 @@ public class CtrlCatalogo {
 
     private ArregloCuentas modelo;
     private FrmCatalogo vista;
-    private String auxCorreo;
     private ArregloPeliculas peliculas;
     private ArregloVideos videos;
 
@@ -240,12 +239,13 @@ public class CtrlCatalogo {
                     if (modelo.cuentaActiva2().getVisualizaciones().buscarPorTitulo(p.getTitulo()) == false) {
                         p.setCant_Visualizaciones(1);
                         modelo.cuentaActiva2().getVisualizaciones().agregarVisulizacion(new Visualizacion(p));
+                        System.out.println("AAAAAAAAAAA");
+                        System.out.println(p.getCant_Visualizaciones());
                     } else {
-                        Video vAux = modelo.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo());
-                        int cv = vAux.getCant_Visualizaciones();
-                        cv++;
-                        vAux.setCant_Visualizaciones(cv);
+                        int cv = modelo.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).getCant_Visualizaciones();
                         modelo.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).setCant_Visualizaciones(cv);
+                        System.out.println("CANTIDAD DE VISUALIZACIONES DE "+p.getTitulo()+": "+p.getCant_Visualizaciones());
+                        System.out.println("SALIENDO de BTNPRINCIPAL");
                     }
 
                     Archivo archivo = new Archivo();
@@ -281,7 +281,6 @@ public class CtrlCatalogo {
                     FrmReproductor fRep = new FrmReproductor();
                     CtrlReproductor cRep;
 
-                    modelo.cuentaActiva(auxCorreo).getUsuario().aumentarPantalla();
                     Archivo archivo = new Archivo();
                     archivo.serializar(Archivo.archivoArregloCuentas, modelo);
                     //MOSTRANDO PELICULA
@@ -313,7 +312,6 @@ public class CtrlCatalogo {
                     Reproductor rep = new Reproductor();
                     FrmReproductor fRep = new FrmReproductor();
                     CtrlReproductor cRep;
-                    modelo.cuentaActiva(auxCorreo).getUsuario().aumentarPantalla();
                     Archivo archivo = new Archivo();
                     archivo.serializar(Archivo.archivoArregloCuentas, modelo);
 
@@ -346,7 +344,7 @@ public class CtrlCatalogo {
                     FrmReproductor fRep = new FrmReproductor();
                     CtrlReproductor cRep;
 
-                    modelo.cuentaActiva(auxCorreo).getUsuario().aumentarPantalla();
+                    
                     Archivo archivo = new Archivo();
                     archivo.serializar(Archivo.archivoArregloCuentas, modelo);
                     Multimedia.catalogoVideos.ver(indiceEnArregloVideos);
@@ -378,7 +376,6 @@ public class CtrlCatalogo {
                     Reproductor rep = new Reproductor();
                     FrmReproductor fRep = new FrmReproductor();
                     CtrlReproductor cRep;
-                    modelo.cuentaActiva(auxCorreo).getUsuario().aumentarPantalla();
                     Archivo archivo = new Archivo();
                     archivo.serializar(Archivo.archivoArregloCuentas, modelo);
                     Multimedia.catalogoVideos.ver(indiceEnArregloVideos);
@@ -398,7 +395,7 @@ public class CtrlCatalogo {
                     vista.dispose();
                     Cuenta a = modelo.cuentaActiva2();
                     String Correo = a.getUsuario().getCorreo();
-                    System.out.println(Correo);
+                    //System.out.println(Correo);
                     modelo.cambiarEstadoSesion(Correo);
                     //GUARDANDO LOS CAMBIOS EN EL ARCHIVO//
                     Archivo archivo = new Archivo();
@@ -445,7 +442,6 @@ public class CtrlCatalogo {
         //ACTUALIZANDO DATOS//
         Archivo archivo = new Archivo();
         archivo.serializar(Archivo.archivoArregloCuentas, modelo);
-        System.out.println("Auxcorreo: " + auxCorreo);
         try {
             System.out.println("El correo de mi cuenta es : " + modelo.cuentaActiva2().getUsuario().getCorreo());
         } catch (Exception ex) {
