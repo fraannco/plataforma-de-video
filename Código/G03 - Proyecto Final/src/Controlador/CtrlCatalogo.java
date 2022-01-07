@@ -234,21 +234,7 @@ public class CtrlCatalogo {
 
                     Pelicula p = new Pelicula();
                     p = Multimedia.catalogoPeliculas.getPelicula(indexPrincipal);
-                    //System.out.println("DURACION PELICULA A AGREGAR: " + p.getDuracion());
                     p.setReproduciendo(true);
-
-                    /*if (modelo.cuentaActiva2().getVisualizaciones().buscarPorTitulo(p.getTitulo()) == false) {
-                        //p.setCant_Visualizaciones(1);
-                        modelo.cuentaActiva2().getVisualizaciones().agregarVisulizacion(new Visualizacion(p));
-                    } else {
-                        System.out.println("ENTRANDO A BTNPRINCIPAL");
-                        //int cv = modelo.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).getCant_Visualizaciones();
-                        //modelo.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).setCant_Visualizaciones(cv);
-                        //System.out.println("CANTIDAD DE VISUALIZACIONES DE " + p.getTitulo() + ": " + p.getCant_Visualizaciones());
-                        //System.out.println(modelo.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).getCant_Visualizaciones());
-                        //System.out.println("SALIENDO de BTNPRINCIPAL");
-                        
-                    }*/
                     if(!modelo.cuentaActiva2().getVisualizaciones().buscarPorTitulo(p.getTitulo())){
                         System.out.println("dentro del if xd");
                         modelo.cuentaActiva2().getVisualizaciones().agregarVisulizacion(new Visualizacion(p,1));
@@ -256,8 +242,6 @@ public class CtrlCatalogo {
                         modelo.cuentaActiva2().getVisualizaciones().buscarVisualizacion(p.getTitulo()).aumentarVisualizacion();
                         Multimedia.catalogoVideos.ver(indiceEnArregloVideos);
                     }
-                    
-                    System.out.println("Se agregara: "+p.getTitulo()+" con "+modelo.cuentaActiva2().getVisualizaciones().buscarVisualizacion(p.getTitulo()).getVecesVisto()+" visualizaciones");
                     
                     Archivo archivo = new Archivo();
                     vista.dispose();
