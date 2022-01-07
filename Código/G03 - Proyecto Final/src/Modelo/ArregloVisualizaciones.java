@@ -253,16 +253,8 @@ public class ArregloVisualizaciones implements Serializable {
         }
     }
 
+    // ordenamiento por seleccion
     public void ordenaVectorVisualizaciones() {
-        /*for(int i=0;i<v.length;i++){
-            for(int j=i+1;j<v.length-1;j++){
-                if(v[j].getVideo().getTiempoVisto()<v[j+1].getVideo().getTiempoVisto()){
-                    Visualizacion aux = v[j];
-                    v[j]=v[j+1];
-                    v[j+1]=aux;
-                }
-            }
-        }*/
         int i, j, pos, menor;
         Visualizacion tmp;
         for (i = 0; i < v.length - 1; i++) {                        // tomamos como menor el primero

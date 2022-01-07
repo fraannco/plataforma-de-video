@@ -35,7 +35,7 @@ public class CtrlInicio {
                 //CAPTAMOS EL CORREO Y LA CONTRASEÑA
                 String correo = vista.txtUsuario.getText();
                 String contraseña = vista.txtContraseña.getText().trim();
-                System.out.println("Se ingreso: "+correo+", "+contraseña);
+                //System.out.println("Se ingreso: "+correo+", "+contraseña);
                 if (correo.isEmpty() || contraseña.isEmpty()) {
                     JOptionPane.showMessageDialog(vista, "Ingresa un usuario y/o contraseña válido(s)", "Iniciar sesión", 0);
                     vista.txtContraseña.requestFocus();
@@ -43,8 +43,7 @@ public class CtrlInicio {
                 }
 
                 try {
-                    boolean r = modelo.verificarEstadoSesion(correo);
-                    if (r == false) {
+                    if (!modelo.verificarEstadoSesion(correo)) {
                         modelo.validarInicioSesion(correo, contraseña);
                         modelo.cambiarEstadoSesion(correo);
                         System.out.println("aaaaaaaaaaaa"+modelo.cuentaActiva(correo).getUsuario().getCorreo());

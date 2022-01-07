@@ -405,9 +405,9 @@ public class CtrlCatalogo {
                 try {
                     Pelicula p = Multimedia.catalogoPeliculas.recomendarPelicula(modelo.cuentaActiva2().getVisualizaciones());
                     if (p.getTitulo().equalsIgnoreCase("Nuevo video")) {
-                        JOptionPane.showMessageDialog(vista, "AUN NO SE REGISTRAN VISUALIZACIONES");
+                        JOptionPane.showMessageDialog(vista, "AUN NO SE REGISTRAN VISUALIZACIONES", "Recomendación de contenido", 0);
                     } else {
-                        JOptionPane.showMessageDialog(vista, "Se le recomienda la siguiente pelicula: " + p.getTitulo());
+                        JOptionPane.showMessageDialog(vista, "Se le recomienda la siguiente pelicula: " + p.getTitulo(), "Recomendación de contenido", 0);
                     }
                 } catch (Exception ex) {
                     System.out.println("EXCEPCION: " + ex.getMessage());
@@ -422,7 +422,7 @@ public class CtrlCatalogo {
                     modelo.cuentaActiva2().getVisualizaciones().ordenaVectorVisualizaciones();
                     modelo.cuentaActiva2().getVisualizaciones().mostrarContenido();
                     modelo.cuentaActiva2().getVisualizaciones().mostrarTop();
-                    JOptionPane.showMessageDialog(vista, modelo.cuentaActiva2().getVisualizaciones().mostrarTop());
+                    JOptionPane.showMessageDialog(vista, modelo.cuentaActiva2().getVisualizaciones().mostrarTop(), "Top de contenido", 0);
                 } catch (Exception ex) {
                     System.out.println("EXCEPCION: " + ex.getMessage());
                 }

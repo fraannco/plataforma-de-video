@@ -129,17 +129,21 @@ public class ArregloCuentas implements Serializable {
             throw new Exception("EL CORREO NO SE ENCUENTRA REGISTRADO O LA CONTRASÑEA NO COINCIDE");
         }
     }
-
-    public boolean verificarEstadoSesion(String Correo) {
-        System.out.println("AAAA");
+    
+    //Impelementando busqueda binaria
+    public boolean verificarEstadoSesion(String Correo) throws Exception {
         boolean r = Boolean.FALSE;
-        for (Cuenta c : cuentas) {
-            if (c.getUsuario().getCorreo().equals(Correo)) {
-                if (c.getSesion() == true) {
-                    r = true;
-                } else if (c.getSesion() == false) {
-                    r = false;
-                }
+        int menor = 0, medio;
+        int mayor = cuentas.length - 1;
+        while (menor <= mayor) {
+            medio = (menor + mayor) / 2;
+            if (cuentas[medio].getUsuario().getCorreo().equals(Correo)) {
+                r = true;
+                break;
+            } else if (cuentas[medio].getUsuario().getCorreo().compareTo(Correo)>0) {
+                mayor = medio - 1;
+            } else {
+                menor = medio + 1;
             }
         }
         return r;
