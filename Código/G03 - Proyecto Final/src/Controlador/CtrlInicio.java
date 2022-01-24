@@ -42,7 +42,7 @@ public class CtrlInicio {
                 }
 
                 try {
-                    if (!modelo.verificarEstadoSesion(correo) || !modelo.buscarCuentaPorCorreo(correo).getSuscripcion().getEstadoMembresia()) {
+                    if (!modelo.validarInicioSesion(correo, contraseña) || !modelo.verificarEstadoSesion(correo) || !modelo.buscarCuentaPorCorreo(correo).getSuscripcion().getEstadoMembresia()) {
                         System.out.println("CORREO: " + correo);
                         JOptionPane.showMessageDialog(vista, "La cuenta ingresada no cuenta con suscripcion activa o no esta registrada");
                     } else {

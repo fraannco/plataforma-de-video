@@ -31,6 +31,20 @@ public class ArregloCuentas implements Serializable {
         }
         
     }
+    
+    //GETTERS AND SETTERS
+
+    public Cuenta[] getCuentas() {
+        return cuentas;
+    }
+
+    public void setCuentas(Cuenta[] cuentas) {
+        this.cuentas = cuentas;
+    }
+    
+    
+    
+    //METODOS
 
     private void aumentarDimension() {
         //int n=x.length;
@@ -111,42 +125,79 @@ public class ArregloCuentas implements Serializable {
         }
         return a;
     }
-
-    public void validarInicioSesion(String Correo, String Contraseña) throws Exception {
-        System.out.println("Dentro de validarInicioSesion");
-        Boolean correoE = false;
-        Boolean contraseñaE = false;
-        for (Cuenta c : cuentas) {
-            if (c.getUsuario().getCorreo().equals(Correo)) {
-                correoE = true;
-                if (c.getUsuario().getContraseña().equals(Contraseña)) {
-                    System.out.println("CORREO: " + c.getUsuario().getCorreo());
-                    contraseñaE = true;
-                    break;
-                }
-            }
-        }
-        if (correoE == false || contraseñaE == false) {
-            throw new Exception("EL CORREO NO SE ENCUENTRA REGISTRADO O LA CONTRASÑEA NO COINCIDE");
+    
+    //Semana 07 - Divide y venceras - MergeSort
+    
+    public void mergesort(Cuenta[] A, int izq, int der) {
+        if (izq < der) {
+            int m = (izq + der) / 2;
+            mergesort(A, izq, m);
+            mergesort(A, m + 1, der);
+            merge(A, izq, m, der);
         }
     }
+
+    public void merge(Cuenta[] A, int izq, int m, int der) {
+        int i, j, k;
+        Cuenta[] B = new Cuenta[A.length]; //array auxiliar
+        for (i = izq; i <= der; i++) //copia ambas mitades en el array auxiliar                                       
+        {
+            B[i] = A[i];
+        }
+
+        i = izq;
+        j = m + 1;
+        k = izq;
+
+        while (i <= m && j <= der) //copia el siguiente elemento más grande                                      
+        {
+            if (B[i].getUsuario().getCorreo().charAt(0) <= B[j].getUsuario().getCorreo().charAt(0)) {
+                A[k++] = B[i++];
+            } else {
+                A[k++] = B[j++];
+            }
+        }
+
+        while (i <= m) //copia los elementos que quedan de la
+        {
+            A[k++] = B[i++]; //primera mitad (si los hay)
+        }
+    }
+
+    //Búsqueda Secuencial en un arreglo ordenado - Semana 05
+    public Boolean validarInicioSesion(String Correo, String Contraseña) throws Exception {
+
+        Boolean cuentaValida = false;
+        mergesort(cuentas, 0, cuentas.length-1);
+        
+        int i=0;
+        
+        while((i <= cuentas.length-1) && (cuentaValida == false) && (Correo.charAt(0) >= cuentas[i].getUsuario().getCorreo().charAt(0))){
+            if(cuentas[i].getUsuario().getCorreo().equalsIgnoreCase(Correo)&& cuentas[i].getUsuario().getContraseña().equals(Contraseña)){
+                cuentaValida = true;
+            }
+            i++;
+        }
+        System.out.println("Cuenta valida: "+cuentaValida);
+        return cuentaValida;
+    }
     
-    //Impelementando busqueda binaria
+    //Busqueda Binaria Iterativa - Semana 05:
     public boolean verificarEstadoSesion(String Correo) throws Exception {
         System.out.println("Dentro de verificarEstadoSesion");
         boolean r = Boolean.FALSE;
-        int menor = 0, medio;
-        int mayor = cuentas.length - 1;
-        while (menor <= mayor) {
-            medio = (menor + mayor) / 2;
+        int ini = 0, medio;
+        int fin = cuentas.length - 1;
+        while (ini <= fin) {
+            medio = (ini + fin) / 2;
             if (cuentas[medio].getUsuario().getCorreo().equals(Correo)) {
                 r = true;
                 System.out.println(Correo);
                 break;
             } else if (cuentas[medio].getUsuario().getCorreo().compareTo(Correo)>0) {
-                mayor = medio - 1;
+                fin = medio - 1;
             } else {
-                menor = medio + 1;
+                ini = medio + 1;
             }
         }
         System.out.println(r);
@@ -173,18 +224,6 @@ public class ArregloCuentas implements Serializable {
     
     public void inactivarSesión(Cuenta cuenta) {
         cuenta.setSesion(!cuenta.getSesion());
-
-    }
-
-    public void dimensionArreglo() throws Exception {
-        int i;
-        try {
-            i = cuentas.length;
-            System.out.println("El tamaño actual de el arreglo de cuentas es: " + i + ".");
-        } catch (Exception e) {
-            System.out.println("EXPCECION: " + e.getMessage());
-        }
-
     }
 
     public int posicionPorCorreo(String Correo) {
