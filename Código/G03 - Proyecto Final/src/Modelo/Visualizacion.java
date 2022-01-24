@@ -20,6 +20,9 @@ public class Visualizacion implements Serializable {
         this.vecesVisto = vecesVisto;
     }
 
+    public Visualizacion() {
+    }
+
     //GETTERS Y SETTERS
     public Video getVideo() {
         return video;

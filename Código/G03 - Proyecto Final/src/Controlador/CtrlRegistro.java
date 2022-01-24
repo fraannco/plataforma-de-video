@@ -54,7 +54,6 @@ public class CtrlRegistro {
                 vista.dispose();
                 FrmPlanes frmPlanes = new FrmPlanes();
                 CtrlPlanes ctrlPlanes = new CtrlPlanes(modelo, frmPlanes);
-                ctrlPlanes.setCorreo(correo);
                 ctrlPlanes.init();
             }
         });

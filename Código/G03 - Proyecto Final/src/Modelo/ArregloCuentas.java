@@ -18,18 +18,18 @@ public class ArregloCuentas implements Serializable {
     //      METODOS
     //===================
     public void agregarCuenta(Cuenta cuenta) {
-        int i;
-        //Se captura la dimension del vector
-        i = cuentas.length;
-        Cuenta a;
-        aumentarDimension();
-        a = cuenta;
         try {
+            int i;
+            //Se captura la dimension del vector
+            i = cuentas.length;
+            Cuenta a;
+            aumentarDimension();
+            a = cuenta;
             cuentas[i] = a;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Indice fuera de limites: " + e);
         }
-
+        
     }
 
     private void aumentarDimension() {
@@ -91,7 +91,7 @@ public class ArregloCuentas implements Serializable {
             }
         }
         if (b == false) {
-            throw new Exception("NO SE ENCONTRÓ AL USUARIO");
+            throw new Exception("EXCECIPN EN buscarCuentaPorCorreo NO SE ENCONTRÓ AL USUARIO");
         }
         return a;
     }
@@ -107,19 +107,20 @@ public class ArregloCuentas implements Serializable {
             }
         }
         if (a == false) {
-            throw new Exception("EL USUARIO NO HA INICIADO SESION");
+            throw new Exception("EXCECIPN EN validarPorCorreo() EL USUARIO NO HA INICIADO SESION");
         }
         return a;
     }
 
     public void validarInicioSesion(String Correo, String Contraseña) throws Exception {
+        System.out.println("Dentro de validarInicioSesion");
         Boolean correoE = false;
         Boolean contraseñaE = false;
         for (Cuenta c : cuentas) {
             if (c.getUsuario().getCorreo().equals(Correo)) {
                 correoE = true;
                 if (c.getUsuario().getContraseña().equals(Contraseña)) {
-                    //System.out.println("CORREO: " + c.getUsuario().getCorreo());
+                    System.out.println("CORREO: " + c.getUsuario().getCorreo());
                     contraseñaE = true;
                     break;
                 }
@@ -132,6 +133,7 @@ public class ArregloCuentas implements Serializable {
     
     //Impelementando busqueda binaria
     public boolean verificarEstadoSesion(String Correo) throws Exception {
+        System.out.println("Dentro de verificarEstadoSesion");
         boolean r = Boolean.FALSE;
         int menor = 0, medio;
         int mayor = cuentas.length - 1;
@@ -139,6 +141,7 @@ public class ArregloCuentas implements Serializable {
             medio = (menor + mayor) / 2;
             if (cuentas[medio].getUsuario().getCorreo().equals(Correo)) {
                 r = true;
+                System.out.println(Correo);
                 break;
             } else if (cuentas[medio].getUsuario().getCorreo().compareTo(Correo)>0) {
                 mayor = medio - 1;
@@ -146,28 +149,11 @@ public class ArregloCuentas implements Serializable {
                 menor = medio + 1;
             }
         }
+        System.out.println(r);
         return r;
     }
-
-    public Cuenta cuentaActiva(String correo) throws Exception{
-
-        Cuenta cuentaAux = new Cuenta();
-        Boolean s = true;
-        for (Cuenta c : cuentas) {
-            if (c.getSesion() && c.getUsuario().getCorreo().equals(correo)) {
-                cuentaAux = c;
-                s = false;
-                break;
-            }
-        }
-
-        if (s == true) {
-            throw new Exception("NO EXISTE UN USUARIO ACTIVO");
-        }
-        return cuentaAux;
-    }
     
-    public Cuenta cuentaActiva2() throws Exception{
+    public Cuenta cuentaActiva() throws Exception{
 
         Cuenta cuentaAux = new Cuenta();
         Boolean s = true;
@@ -180,7 +166,7 @@ public class ArregloCuentas implements Serializable {
         }
 
         if (s == true) {
-            throw new Exception("NO EXISTE UN USUARIO ACTIVO");
+            throw new Exception("EXCEPCION EN cuentaActiva2 UN USUARIO ACTIVO");
         }
         return cuentaAux;
     }

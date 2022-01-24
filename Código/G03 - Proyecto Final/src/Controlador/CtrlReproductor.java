@@ -88,23 +88,23 @@ public class CtrlReproductor {
                 //CAPTAMOS LA PELICULA QUE SE ESTA REPRODUCIENDO
                 try {
 
-                    Video p = aCuenta.cuentaActiva2().getVisualizaciones().reproduciendo();
+                    Video p = aCuenta.cuentaActiva().getVisualizaciones().reproduciendo();
 
                     int duracion = p.getDuracion();
                     int rand = (int) (Math.random() * duracion);
-                    if (aCuenta.cuentaActiva2().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).getTiempoVisto() == 0) {
-                        aCuenta.cuentaActiva2().getVisualizaciones().reproduciendo().setVisto(true);
-                        aCuenta.cuentaActiva2().getVisualizaciones().reproduciendo().setTiempoVisto(rand);
-                        aCuenta.cuentaActiva2().getVisualizaciones().reproduciendo().setReproduciendo(false);
+                    if (aCuenta.cuentaActiva().getVisualizaciones().buscarVideoEnArray(p.getTitulo()).getTiempoVisto() == 0) {
+                        aCuenta.cuentaActiva().getVisualizaciones().reproduciendo().setVisto(true);
+                        aCuenta.cuentaActiva().getVisualizaciones().reproduciendo().setTiempoVisto(rand);
+                        aCuenta.cuentaActiva().getVisualizaciones().reproduciendo().setReproduciendo(false);
                     } else {
-                        Video vAux = aCuenta.cuentaActiva2().getVisualizaciones().reproduciendo();
+                        Video vAux = aCuenta.cuentaActiva().getVisualizaciones().reproduciendo();
                         int tv = rand + vAux.getTiempoVisto();
-                        aCuenta.cuentaActiva2().getVisualizaciones().reproduciendo().setTiempoVisto(tv);
-                        aCuenta.cuentaActiva2().getVisualizaciones().reproduciendo().setReproduciendo(false);
+                        aCuenta.cuentaActiva().getVisualizaciones().reproduciendo().setTiempoVisto(tv);
+                        aCuenta.cuentaActiva().getVisualizaciones().reproduciendo().setReproduciendo(false);
                         System.out.println("aaaaaaaaaaaaa");
                     }
 
-                    aCuenta.cuentaActiva2().getVisualizaciones().mostrarContenido();
+                    aCuenta.cuentaActiva().getVisualizaciones().mostrarContenido();
 
                     ctrlCatalogo.initBack();
 

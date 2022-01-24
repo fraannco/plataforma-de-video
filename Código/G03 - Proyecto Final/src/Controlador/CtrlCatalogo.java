@@ -164,9 +164,9 @@ public class CtrlCatalogo {
 
         try {
             //AGREGANDO VISUALIZACION
-            ArregloVisualizaciones v = modelo.cuentaActiva2().getVisualizaciones();
+            ArregloVisualizaciones v = modelo.cuentaActiva().getVisualizaciones();
             if (v == null) {
-                modelo.cuentaActiva2().setVisualizaciones(new ArregloVisualizaciones());
+                modelo.cuentaActiva().setVisualizaciones(new ArregloVisualizaciones());
             }
         } catch (Exception e) {
 
@@ -232,11 +232,11 @@ public class CtrlCatalogo {
                     Pelicula p = new Pelicula();
                     p = Multimedia.catalogoPeliculas.getPelicula(indexPrincipal);
                     p.setReproduciendo(true);
-                    if(!modelo.cuentaActiva2().getVisualizaciones().buscarPorTitulo(p.getTitulo())){
+                    if(!modelo.cuentaActiva().getVisualizaciones().buscarPorTitulo(p.getTitulo())){
                         System.out.println("dentro del if xd");
-                        modelo.cuentaActiva2().getVisualizaciones().agregarVisulizacion(new Visualizacion(p,1));
+                        modelo.cuentaActiva().getVisualizaciones().agregarVisulizacion(new Visualizacion(p,1));
                     }else {
-                        modelo.cuentaActiva2().getVisualizaciones().buscarVisualizacion(p.getTitulo()).aumentarVisualizacion();
+                        modelo.cuentaActiva().getVisualizaciones().buscarVisualizacion(p.getTitulo()).aumentarVisualizacion();
                         Multimedia.catalogoVideos.ver(indiceEnArregloVideos);
                     }
                     
@@ -384,7 +384,7 @@ public class CtrlCatalogo {
             public void actionPerformed(ActionEvent ae) {
                 try {
                     vista.dispose();
-                    Cuenta a = modelo.cuentaActiva2();
+                    Cuenta a = modelo.cuentaActiva();
                     String Correo = a.getUsuario().getCorreo();
                     //System.out.println(Correo);
                     modelo.cambiarEstadoSesion(Correo);
@@ -399,11 +399,12 @@ public class CtrlCatalogo {
                 }
             }
         });
+        
         this.vista.btnRecomendar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 try {
-                    Pelicula p = Multimedia.catalogoPeliculas.recomendarPelicula(modelo.cuentaActiva2().getVisualizaciones());
+                    Pelicula p = Multimedia.catalogoPeliculas.recomendarPelicula(modelo.cuentaActiva().getVisualizaciones());
                     if (p.getTitulo().equalsIgnoreCase("Nuevo video")) {
                         JOptionPane.showMessageDialog(vista, "AUN NO SE REGISTRAN VISUALIZACIONES", "Recomendación de contenido", 0);
                     } else {
@@ -414,15 +415,16 @@ public class CtrlCatalogo {
                 }
             }
         });
+        
         this.vista.btnTop.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
 
                 try {
-                    modelo.cuentaActiva2().getVisualizaciones().ordenaVectorVisualizaciones();
-                    modelo.cuentaActiva2().getVisualizaciones().mostrarContenido();
-                    modelo.cuentaActiva2().getVisualizaciones().mostrarTop();
-                    JOptionPane.showMessageDialog(vista, modelo.cuentaActiva2().getVisualizaciones().mostrarTop(), "Top de contenido", 0);
+                    modelo.cuentaActiva().getVisualizaciones().ordenaVectorVisualizaciones();
+                    modelo.cuentaActiva().getVisualizaciones().mostrarContenido();
+                    modelo.cuentaActiva().getVisualizaciones().mostrarTop();
+                    JOptionPane.showMessageDialog(vista, modelo.cuentaActiva().getVisualizaciones().mostrarTop(), "Top de contenido", 0);
                 } catch (Exception ex) {
                     System.out.println("EXCEPCION: " + ex.getMessage());
                 }
@@ -436,7 +438,7 @@ public class CtrlCatalogo {
         Archivo archivo = new Archivo();
         archivo.serializar(Archivo.archivoArregloCuentas, modelo);
         try {
-            System.out.println("El correo de mi cuenta es : " + modelo.cuentaActiva2().getUsuario().getCorreo());
+            System.out.println("El correo de mi cuenta es : " + modelo.cuentaActiva().getUsuario().getCorreo());
         } catch (Exception ex) {
             System.out.println("Inserte mensaje de error aqui");
         }

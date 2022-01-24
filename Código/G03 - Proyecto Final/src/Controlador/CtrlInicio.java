@@ -1,4 +1,3 @@
-
 package Controlador;
 
 import Modelo.Archivo;
@@ -43,29 +42,26 @@ public class CtrlInicio {
                 }
 
                 try {
-                    if (!modelo.verificarEstadoSesion(correo)) {
-                        modelo.validarInicioSesion(correo, contraseña);
+                    if (!modelo.verificarEstadoSesion(correo) || !modelo.buscarCuentaPorCorreo(correo).getSuscripcion().getEstadoMembresia()) {
+                        System.out.println("CORREO: " + correo);
+                        JOptionPane.showMessageDialog(vista, "La cuenta ingresada no cuenta con suscripcion activa o no esta registrada");
+                    } else {
+                        System.out.println("asdf: "+modelo.buscarCuentaPorCorreo(correo).getSesion());
                         modelo.cambiarEstadoSesion(correo);
-                        System.out.println("aaaaaaaaaaaa"+modelo.cuentaActiva(correo).getUsuario().getCorreo());
-                        if (!modelo.cuentaActiva(correo).getSuscripcion().getEstadoMembresia()) {
-                            System.out.println("CORREO: "+correo);
-                            JOptionPane.showMessageDialog(vista, "La cuenta ingresada no cuenta con suscripcion activa");
-                            archivo.serializar(Archivo.archivoArregloCuentas, modelo);
-                        } else {
-                            JOptionPane.showMessageDialog(vista, "¡Bienvenido!");
-                            vista.dispose();
-                            
-                            archivo.serializar(Archivo.archivoArregloCuentas, modelo);
-                            
-                            FrmCatalogo frmCatalogo = new FrmCatalogo();
-                            CtrlCatalogo ctrlCatalogo = new CtrlCatalogo(modelo, frmCatalogo);
-                            
-                            ctrlCatalogo.init();
-                            System.out.println("aaaaaaaaaaaa"+modelo.cuentaActiva(correo).getUsuario().getCorreo());
-                        }
-                    }                    
+                        System.out.println("Cuenta activa: "+modelo.cuentaActiva().getUsuario().getCorreo());
+                        
+                        JOptionPane.showMessageDialog(vista, "¡Bienvenido!");
+                        vista.dispose();
+
+                        archivo.serializar(Archivo.archivoArregloCuentas, modelo);
+
+                        FrmCatalogo frmCatalogo = new FrmCatalogo();
+                        CtrlCatalogo ctrlCatalogo = new CtrlCatalogo(modelo, frmCatalogo);
+
+                        ctrlCatalogo.init();
+                    }
                 } catch (Exception e) {
-                    System.out.println("EXCEPCION: " + e.getMessage());
+                    System.out.println("a EXCEPCION: " + e.getMessage());
                     JOptionPane.showMessageDialog(vista, e.getMessage());
                 }
             }
@@ -75,7 +71,7 @@ public class CtrlInicio {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 vista.dispose();
-                
+
                 FrmRegistro fRegistro = new FrmRegistro();
                 CtrlRegistro ctrlRegistro = new CtrlRegistro(modelo, fRegistro);
                 ctrlRegistro.init();

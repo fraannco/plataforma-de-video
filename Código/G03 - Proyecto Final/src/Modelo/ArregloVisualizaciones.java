@@ -253,24 +253,23 @@ public class ArregloVisualizaciones implements Serializable {
         }
     }
 
-    // ordenamiento por seleccion
+    // Ordenamiento por Selección Directa - Semana 04
     public void ordenaVectorVisualizaciones() {
-        int i, j, pos, menor;
-        Visualizacion tmp;
-        for (i = 0; i < v.length - 1; i++) {                        // tomamos como menor el primero
-            menor = v[i].getVideo().getTiempoVisto();             // de los elementos que quedan por ordenar                    
-            pos = i;                                              // y guardamos su posición
-            for (j = i + 1; j < v.length; j++) {                   // buscamos en el resto
-                if (v[j].getVideo().getTiempoVisto() > menor) { // del array algún elemento
-                    menor = v[j].getVideo().getTiempoVisto();   // menor que el actual
-                    pos = j;
+        Visualizacion menor = new Visualizacion();
+        int k = 0;
+
+        for (int i = 0; i < v.length - 1; i++) {
+            menor = v[i];
+            k = i;
+
+            for (int j = i + 1; j < v.length; j++) {
+                if (v[j].getVideo().getCant_Visualizaciones() < menor.getVideo().getCant_Visualizaciones()) {
+                    menor = v[j];
+                    k = j;
                 }
             }
-            if (pos != i) { // si hay alguno menor se intercambia                         
-                tmp = v[i];
-                v[i] = v[pos];
-                v[pos] = tmp;
-            }
+            v[k] = v[i];
+            v[i] = menor;
         }
     }
 

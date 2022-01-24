@@ -6,11 +6,9 @@ import Modelo.Archivo;
 import Modelo.Multimedia;
 import Modelo.ArregloCuentas;
 import Modelo.Membresia;
-import Modelo.Pelicula;
 import Modelo.Suscripcion;
 import Modelo.Tarjeta;
 import Modelo.Usuario;
-import Modelo.Video;
 import Vista.FrmInicio;
 import java.io.File;
 
@@ -23,6 +21,23 @@ public class Main {
         Cuentas.agregarCuenta(Cuentas.crearCuenta(new Usuario("franco@gmail.com", "franco@gmail.com", "994421210"),
                 new Tarjeta("Fran", "Co", "4895045575702316", "25/12", 123),
                 new Suscripcion(Membresia.PREMIUM)));
+//        Cuentas.agregarCuenta(Cuentas.crearCuenta(new Usuario("christian@gmail.com", "christian@gmail.com", "994421210"),
+//                new Tarjeta("Fran", "Co", "4895045575702316", "25/12", 123),
+//                new Suscripcion(Membresia.PREMIUM)));
+//        Cuentas.agregarCuenta(Cuentas.crearCuenta(new Usuario("samuel@gmail.com", "samuel@gmail.com", "994421210"),
+//                new Tarjeta("Fran", "Co", "4895045575702316", "25/12", 123),
+//                new Suscripcion(Membresia.PREMIUM)));
+//        Cuentas.agregarCuenta(Cuentas.crearCuenta(new Usuario("diego@gmail.com", "diego@gmail.com", "994421210"),
+//                new Tarjeta("Fran", "Co", "4895045575702316", "25/12", 123),
+//                new Suscripcion(Membresia.PREMIUM)));
+//        Cuentas.agregarCuenta(Cuentas.crearCuenta(new Usuario("nick@gmail.com", "nick@gmail.com", "994421210"),
+//                new Tarjeta("Fran", "Co", "4895045575702316", "25/12", 123),
+//                new Suscripcion(Membresia.PREMIUM)));
+        
+        
+        
+        //Cuentas.mostrarCuentas();
+        
         
         //Agregamos el catalogo de peliculas que manejara el programa
         Multimedia.crearCatalogo();

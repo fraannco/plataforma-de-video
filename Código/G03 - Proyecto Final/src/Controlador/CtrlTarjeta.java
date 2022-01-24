@@ -18,7 +18,7 @@ public class CtrlTarjeta {
     public CtrlTarjeta(ArregloCuentas modelo, FrmTarjeta vista) {
         this.modelo = modelo;
         this.vista = vista;
-        this.auxCorreo = getCorreo();
+        
         this.vista.btnGuardarTarjeta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -33,16 +33,17 @@ public class CtrlTarjeta {
                     Tarjeta tarjetaAux = new Tarjeta(nombre, apellido, nroTarjeta, fechaVencimiento, cvv);
 
                     if (tarjetaAux.validar()) {
-                        modelo.cuentaActiva(auxCorreo).setTarjeta(tarjetaAux);
-                        modelo.cambiarEstadoSesion(modelo.cuentaActiva(auxCorreo).getUsuario().getCorreo());
+                        modelo.cuentaActiva().setTarjeta(tarjetaAux);
+                        modelo.cambiarEstadoSesion(modelo.cuentaActiva().getUsuario().getCorreo());
 
-                        vista.dispose();
+                        
                         //Archivos.Creador.serializar(Archivos.Archivos.archivoArregloCuentas, ArregloCuentas);
 
                         Archivo archivo = new Archivo();
                         archivo.serializar(Archivo.archivoArregloCuentas, modelo);
 
-                        JOptionPane.showMessageDialog(vista, "¡Bienvenido a Netflix!");
+                        JOptionPane.showMessageDialog(vista, "¡Bienvenido a nuestro servicio!");
+                        vista.dispose();
                         FrmInicio frmInicio = new FrmInicio();
                         CtrlInicio ctrlInicio = new CtrlInicio(modelo, frmInicio);
                         ctrlInicio.init();
@@ -52,13 +53,6 @@ public class CtrlTarjeta {
                         vista.txtCVV.setText("");
 
                     }
-
-                    /*FrmPerfil fPerfil = new FrmPerfil();
-                    CtrlPerfiles ctrlPerfil = new CtrlPerfiles(modelo,fPerfil);*/
-                    /* FrmBienvenida frmInicio = new FrmBienvenida();
-                    CtrlBienvenida ctrlInicio = new CtrlBienvenida(frmInicio);
-                    ctrlInicio.init();*/
-                    //modelo.mostrarCuentas();
                 } catch (Exception e) {
                     System.out.println("EXCEPCION: " + e.getMessage());
                 }
@@ -72,12 +66,4 @@ public class CtrlTarjeta {
         this.vista.setVisible(true);
     }
 
-    public String getCorreo() {
-        return this.auxCorreo;
-    }
-
-    public void setCorreo(String Correo) {
-        this.auxCorreo = Correo;
-
-    }
 }
