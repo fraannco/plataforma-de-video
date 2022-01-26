@@ -11,6 +11,7 @@ import Modelo.Pelicula;
 import Modelo.Reproductor;
 import Modelo.Video;
 import Modelo.Visualizacion;
+import Vista.FrmAdministrarCuenta;
 import Vista.FrmCatalogo;
 import Vista.FrmInicio;
 import Vista.FrmReproductor;
@@ -413,6 +414,16 @@ public class CtrlCatalogo {
                 } catch (Exception ex) {
                     System.out.println("EXCEPCION: " + ex.getMessage());
                 }
+            }
+        });
+        
+        this.vista.btnAdministrarCuenta.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                vista.dispose();
+                FrmAdministrarCuenta frmAdminCuenta = new FrmAdministrarCuenta();
+                CtrlAdministrarCuenta ctrlAdministrarCuenta = new CtrlAdministrarCuenta(modelo, frmAdminCuenta);
+                ctrlAdministrarCuenta.init();
             }
         });
         
