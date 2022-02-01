@@ -2,10 +2,6 @@ package Vista;
 
 import java.awt.Color;
 
-/**
- *
- * @author Julian Torres
- */
 public class FrmReproductor extends javax.swing.JFrame {
 
     public FrmReproductor() {

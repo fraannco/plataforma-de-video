@@ -263,7 +263,8 @@ public class ArregloVisualizaciones implements Serializable {
             k = i;
 
             for (int j = i + 1; j < v.length; j++) {
-                if (v[j].getVideo().getCant_Visualizaciones() < menor.getVideo().getCant_Visualizaciones()) {
+                if (v[j].getVideo().getTiempoVisto()
+                        > menor.getVideo().getTiempoVisto()) {
                     menor = v[j];
                     k = j;
                 }
@@ -272,7 +273,6 @@ public class ArregloVisualizaciones implements Serializable {
             v[i] = menor;
         }
     }
-
     public String mostrarTop() {
         String top = "";
         //String aux;

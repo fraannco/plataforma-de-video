@@ -128,28 +128,28 @@ public class ArregloCuentas implements Serializable {
     
     //Semana 07 - Divide y venceras - MergeSort
     
-    public void mergesort(Cuenta[] A, int izq, int der) {
-        if (izq < der) {
-            int m = (izq + der) / 2;
-            mergesort(A, izq, m);
-            mergesort(A, m + 1, der);
-            merge(A, izq, m, der);
+    public void mergesort(Cuenta[] A, int inicio, int fin) {
+        if (inicio < fin) {
+            int m = (inicio + fin) / 2;
+            mergesort(A, inicio, m);
+            mergesort(A, m + 1, fin);
+            merge(A, inicio, m, fin);
         }
     }
 
-    public void merge(Cuenta[] A, int izq, int m, int der) {
+    public void merge(Cuenta[] A, int inicio, int mitad, int fin) {
         int i, j, k;
         Cuenta[] B = new Cuenta[A.length]; //array auxiliar
-        for (i = izq; i <= der; i++) //copia ambas mitades en el array auxiliar                                       
+        for (i = inicio; i <= fin; i++) //copia ambas mitades en el array auxiliar                                       
         {
             B[i] = A[i];
         }
 
-        i = izq;
-        j = m + 1;
-        k = izq;
+        i = inicio;
+        j = mitad + 1;
+        k = inicio;
 
-        while (i <= m && j <= der) //copia el siguiente elemento más grande                                      
+        while (i <= mitad && j <= fin) //copia el siguiente elemento más grande                                      
         {
             if (B[i].getUsuario().getCorreo().charAt(0) <= B[j].getUsuario().getCorreo().charAt(0)) {
                 A[k++] = B[i++];
@@ -158,7 +158,7 @@ public class ArregloCuentas implements Serializable {
             }
         }
 
-        while (i <= m) //copia los elementos que quedan de la
+        while (i <= mitad) //copia los elementos que quedan de la
         {
             A[k++] = B[i++]; //primera mitad (si los hay)
         }

@@ -8,372 +8,365 @@ public class Multimedia implements Serializable {
     public static ArregloPeliculas catalogoPeliculas = new ArregloPeliculas();
 
     public static void crearCatalogo() {
-        //INSTANCIAMOS LA PELICULA "Whiplash: Música & Obsesión"
-        String[] elenco1 = {"Miles Teller", "J. K. Simmons", "Melissa Benoist", "Austin Stowell", "Jayson Blair",
-            "Kavita Patil", "Michael Cohen", "Kofi Siriboe", "Paul Reiser"};
 
-        Pelicula p1 = new Pelicula( /*TITULO*/"Whiplash",
-                /*DIRECTOR*/ "Damien Chazelle",
+
+        //INSTANCIAMOS LA PELICULA "Milagros del cielo"/*NUEVO*/
+        String[] elenco1 = {"Jennifer Garner", "Kylie Rogers", "Queen Latifah", 
+        "Eugenio Derbez", "Martin Henderson", "John Carroll Lynch"};
+
+        Pelicula p1 = new Pelicula( /*TITULO*/"Milagros del cielo",
+                /*DIRECTOR*/ "Patricia Riggen",
                 /*GENERO*/ "DRAMA",
-                /*AÑO DE ESTRENO*/ 2014,
-                /*EDAD APTA*/ 15,
-                /*SINOPSIS*/ "GA Andrew Neiman es un joven y ambicioso baterista de jazz. Marcado por el fracaso de la carrera literaria de su padre, "
-                + "\nestá obsesionado con alcanzar la cima dentro del elitista conservatorio de música de la Costa Este en el que estudia.",
+                /*AÑO DE ESTRENO*/ 2016,
+                /*EDAD APTA*/ 13,
+                /*SINOPSIS*/ "Christy, una madre devota con una hija muy enferma, sufre una crisis de fe mientras intenta desesperadamente"
+                + "\nsalvar a su pequeña y mantener unida su familia.",
                 /*CAST*/ elenco1,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 106,
+                /*DURACION*/ 109,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 1, "src\\Imagenes\\Peliculas\\whiplash.png", "src\\Peliculas\\whiplash.mp4");
+                /*CODIGO*/ 1, "src\\Imagenes\\Peliculas\\Milagros_del_Cielo.jpg", "src\\Peliculas\\Milagros_del_Cielo.mp4");
 
         Multimedia.catalogoPeliculas.agregarPelicula(p1);
 
-        Pelicula p2 = new Pelicula( /*TITULO*/"Deadpool",
+
+
+
+        //INSTANCIAMOS LA PELICULA "El niño que domo el viento"/*NUEVO*/
+        String[] elenco2 = {"Maxwell Simba", "Chiwetel Ejiofor", "Aissa Maiga", 
+        "Lily Banda", "Lemogang Tsipa"};
+
+        Pelicula p2 = new Pelicula( /*TITULO*/"El niño que domó el viento",
                 /*DIRECTOR*/ "Damien Chazelle",
                 /*GENERO*/ "DRAMA",
-                /*AÑO DE ESTRENO*/ 2014,
-                /*EDAD APTA*/ 15,
-                /*SINOPSIS*/ "Sinopsis de Deadpool",
-                /*CAST*/ elenco1,
+                /*AÑO DE ESTRENO*/ 2019,
+                /*EDAD APTA*/ 13,
+                /*SINOPSIS*/ "Un chico se inspira en un libro de ciencia para crear un molino de viento que salve a su aldea malauí del hambre."
+                +"\nBasada en la historia real de William Kamkwamba.",
+                /*CAST*/ elenco2,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 106,
+                /*DURACION*/ 113,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 2, "src\\Imagenes\\Peliculas\\deadpool.png", "src\\Peliculas\\deadpool.mp4");
+                /*CODIGO*/ 2, "src\\Imagenes\\Peliculas\\Domo_el_viento.jpg", "src\\Peliculas\\Domo_el_viento.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p2);
 
-        //INSTANCIAMOS LA PELICULA "El viaje de Chihiro"
-        String[] elenco3 = {"Rumi Hiiragi", "Miyu Irino", "Mari Natsuki", "Yumi Tamai", "Bunta Sugawara", "Akio Nakamura"};
-        Pelicula p3 = new Pelicula( /*TITULO*/"El viaje de Chihiro",
-                /*DIRECTOR*/ "Hayao Miyazaki",
-                /*GENERO*/ "ANIMACIÓN",
-                /*AÑO DE ESTRENO*/ 2001,
+
+
+
+        //INSTANCIAMOS LA PELICULA "La vida ante sí" /*NUEVO*/
+        String[] elenco3 = {"Sophia Loren", "Ibrahima Gueye", "Renato Carpentieri", "Diego Iosif Pirvu", "Massimilliano Rossi"};
+        Pelicula p3 = new Pelicula( /*TITULO*/"La vida ante sí",
+                /*DIRECTOR*/ "Edoardo Ponti",
+                /*GENERO*/ "DRAMA",
+                /*AÑO DE ESTRENO*/ 2020,
                 /*EDAD APTA*/ 13,
-                /*SINOPSIS*/ "Perdida en el bosque, una niña (Rumi Hîragi) de 10 años conoce animales, fantasmas y criaturas extrañas.",
+                /*SINOPSIS*/ "Una sobreviviente del Holocausto que cuida niños en su casa accede a refugiar a un resentido niño de la calle que le"
+                +"\nle robó, y forman un impensable lazo de amistad.",
                 /*CAST*/ elenco3,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 125,
+                /*DURACION*/ 95,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 3, "src\\Imagenes\\Peliculas\\El viaje de Chihiro.jpg", "src\\Peliculas\\El viaje de Chihiro.mp4");
+                /*CODIGO*/ 3, "src\\Imagenes\\Peliculas\\La_vida.jpg", "src\\Peliculas\\La_vida.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p3);
 
-        //INSTANCIAMOS LA PELICULA "Fragmentado"
-        String[] elenco4 = {"James McAvoy", "Anya Taylor-Joy", "Betty Buckley", "Haley Lu Richardson",
-            "Jessica Sula", "Kim Director", "Brad William Henke", "Lyne Renée"};
-        Pelicula p4 = new Pelicula( /*TITULO*/"Fragmentado",
-                /*DIRECTOR*/ "M. Night Shyamalan",
+
+
+        //INSTANCIAMOS LA PELICULA "El duende maldito regresa" /*NUEVO*/
+        String[] elenco4 = {"Taylor Spreitler", "Pepi Sonuga", "Linden Bennett", "Emily Reid",
+            "Mark Holton", "Ben McGregor", "Oliver Llewellyn", "Heather McDonald"};
+
+        Pelicula p4 = new Pelicula( /*TITULO*/"El duende maldito regresa",
+                /*DIRECTOR*/ "Steven Kostanski",
                 /*GENERO*/ "TERROR",
-                /*AÑO DE ESTRENO*/ 2016,
-                /*EDAD APTA*/ 15,
-                /*SINOPSIS*/ "Kevin, un hombre con 23 personalidades, secuestra a 3 chicas jóvenes y las mantiene retenidas en un sótano. "
-                + "\nA medida que una de sus personalidades va imponiéndose al resto, la vida de las chicas, y la del propio Kevin, peligra cada vez más.",
+                /*AÑO DE ESTRENO*/ 2018,
+                /*EDAD APTA*/ 16,
+                /*SINOPSIS*/ "Veinticinco años después de haber sido derrotado por una adolecente, el duente malvado vuelve a la vida cuando unas"
+                + "\namigas de la fraternidad lo despiertan accidentalmente.",
                 /*CAST*/ elenco4,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 117,
+                /*DURACION*/ 93,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 4, "src\\Imagenes\\Peliculas\\fragmentando.jpg", "src\\Peliculas\\fragmentando.mp4");
+                /*CODIGO*/ 4, "src\\Imagenes\\Peliculas\\El_duende.jpg", "src\\Peliculas\\El_duende.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p4);
 
-        //INSTANCIAMOS LA PELICULA "La tumba de las luciérnagas"
-        String[] elenco5 = {"Tsutomo Tatsumi", "Ayano Shiraishi", "Akemi Yamaguchi", "Yoshiko Shinohara", "Hiroshi Kawaguchi"};
-        Pelicula p5 = new Pelicula( /*TITULO*/"La tumba de las luciérnagas",
-                /*DIRECTOR*/ "Isao Takahata",
+
+
+        //INSTANCIAMOS LA PELICULA "El dragon de la tetera" */NUEVO*/
+        String[] elenco5 = {"Jimmy Wong", "John Cho", "Constance Wu", "Natasha Liu Bordizzo", "Will Yun Lee"};
+        Pelicula p5 = new Pelicula( /*TITULO*/"El dragon de la tetera",
+                /*DIRECTOR*/ "Chris Appelhans",
                 /*GENERO*/ "ANIMACIÓN",
                 /*AÑO DE ESTRENO*/ 1988,
                 /*EDAD APTA*/ 12,
-                /*SINOPSIS*/ "Un adolescente se ve obligado a cuidar a su hermana menor después de que un bombardeo aliado durante la Segunda Guerra Mundial destruye su casa y mata a su madre.",
+                /*SINOPSIS*/ "El perseverante adolecente Din anhela recuperar a su mejor amiga de la infancia cuando conoce a un dragón de los deseos"
+                +"\nque le muestras la magia de lo posible.",
                 /*CAST*/ elenco5,
                 /*ESTADO DE VISUALIZACION*/ false,
                 /*DURACION*/ 89,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 5, "src\\Imagenes\\Peliculas\\La tumba de las luciérnagas.jpg", "src\\Peliculas\\La tumba de las luciérnagas.mp4");
+                /*CODIGO*/ 5, "src\\Imagenes\\Peliculas\\El_dragon.jpg", "src\\Peliculas\\El_dragon.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p5);
 
-        //INSTANCIAMOS LA PELICULA "El jardín de las palabras"
-        String[] elenco6 = {"Miyu Irino", "Kana Hanazawa", "Takeshi Maeda", "Yuka Terasaki",
-            "Fumi Hirano", "Mikako Komatsu", "Suguru Inoue", "Megumi Han"};
-        Pelicula p6 = new Pelicula( /*TITULO*/"El jardín de las palabras",
-                /*DIRECTOR*/ "Makoto Shinkai",
+
+
+
+        //INSTANCIAMOS LA PELICULA "Megamente" /*NUEVO*/
+        String[] elenco6 = {"Will Ferrell", "Brad Pitt", "Jonah Hill", "David Cross",
+            "Ben Stiller", "Justin Theroux", "Jessica Schulte", "Tom McGrath"};
+
+        Pelicula p6 = new Pelicula( /*TITULO*/"Megamente",
+                /*DIRECTOR*/ "Tom McGrath",
                 /*GENERO*/ "ANIMACIÓN",
-                /*AÑO DE ESTRENO*/ 2013,
-                /*EDAD APTA*/ 12,
-                /*SINOPSIS*/ "Nadie parece entender a un adolescente y sus futuros sueños... "
-                + "hasta que un día conoce a una chica problemática y distante en el parque.",
-                /*CAST*/ elenco5,
+                /*AÑO DE ESTRENO*/ 2010,
+                /*EDAD APTA*/ 7,
+                /*SINOPSIS*/ "Cuando el brillante supervillano Megamind mata por accidente a su némesis, crea un nuevo enemigo que se propone"
+                + "\ndestrir el mundo.",
+                /*CAST*/ elenco6,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 46,
+                /*DURACION*/ 97,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 6, "src\\Imagenes\\Peliculas\\El jardín de las palabras.jpg", "src\\Peliculas\\El jardín de las palabras.mp4");
+                /*CODIGO*/ 6, "src\\Imagenes\\Peliculas\\Megamente.jpg", "src\\Peliculas\\Megamente.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p6);
 
-        //INSTANCIAMOS LA PELICULA "El exorcista"
-        String[] elenco7 = {"Ellen Burstyn", "Max Von Sydow", "Jason Miller", "Linda Blair",
-            "Kitty Winn", "Lee J. Cobb", "Jack MacGowran", "Megumi Han"};
-        Pelicula p7 = new Pelicula( /*TITULO*/"El exorcista",
-                /*DIRECTOR*/ "William Friedkin",
+
+
+        //INSTANCIAMOS LA PELICULA "Slender Man" /*NUEVO*/
+        String[] elenco7 = {"Joey King", "Julia Goldani Telles", "Jaz Sinclair", "Annalise Basso",
+            "Alex Fitzalan", "Taylor Richardson", "Javier Botet", "Michael Reilly"};
+        Pelicula p7 = new Pelicula( /*TITULO*/"Slender Man",
+                /*DIRECTOR*/ "Sylvain White",
                 /*GENERO*/ "TERROR",
-                /*AÑO DE ESTRENO*/ 1973,
-                /*EDAD APTA*/ 18,
-                /*SINOPSIS*/ "NUna actriz llama a unos sacerdotes jesuitas para que intenten terminar con la posesión demoníaca de su hija de 12 años.",
-                /*CAST*/ elenco6,
+                /*AÑO DE ESTRENO*/ 2018,
+                /*EDAD APTA*/ 13,
+                /*SINOPSIS*/ "Desesperados por encontrar a su amiga perdida, un grupo de chicas invoca a la entidad que presuntamente se la llevó:"
+                +"\nuna malvada leyenda de internet llamada Slender Man.",
+                /*CAST*/ elenco7,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 122,
+                /*DURACION*/93,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 7, "src\\Imagenes\\Peliculas\\El exorcista.jpg", "src\\Peliculas\\El exorcista.mp4");
+                /*CODIGO*/ 7, "src\\Imagenes\\Peliculas\\Slenderman.jpg", "src\\Peliculas\\Slenderman.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p7);
 
-        //INSTANCIAMOS LA PELICULA "El cuaderno de Tomy"
-        String[] elenco8 = {"Valeria Bertuccelli", "Esteban Lamothe", "Julián Sorín", "Mauricio Dayub",
-             "Catarina Spinetta", "Carla Quevedo", "Anita Pauls", "Mónica Antonópulos"};
-        Pelicula p8 = new Pelicula( /*TITULO*/"El cuaderno de Tomy",
-                /*DIRECTOR*/ "Carlos Sorín",
-                /*GENERO*/ "DRAMA",
-                /*AÑO DE ESTRENO*/ 2020,
+        //INSTANCIAMOS LA PELICULA "Los Croods" /*NUEVO*/
+        String[] elenco8 = {"Nicolas Cage", "Emma Stone", "Ryan Reynolds", "Catherine Keener",
+             "Cloris Leachman", "Clark Duke", "Chris Sanders", "Dandy Thom"};
+        
+        Pelicula p8 = new Pelicula( /*TITULO*/"Los Croods",
+                /*DIRECTOR*/ "Kirk DeMicco, Chris Sanders",
+                /*GENERO*/ "ANIMACION",
+                /*AÑO DE ESTRENO*/ 2013,
                 /*EDAD APTA*/ 16,
-                /*SINOPSIS*/ "madre decide usar su humor y su optimismo, "
-                + "\ny escribe un libro para que su hijo de cuatro años la recuerde por siempre.",
-                /*CAST*/ elenco7,
+                /*SINOPSIS*/ "Cuando un terremoto destruye su cueva, una familia prehistorica se ve obligada a viajar a travez de una zona desnococida"
+                + "\nen busca de un nuevo hogar.",
+                /*CAST*/ elenco8,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 84,
+                /*DURACION*/ 98,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 8, "src\\Imagenes\\Peliculas\\El cuaderno de Tomy.jpg", "src\\Peliculas\\El cuaderno de Tomy.mp4");
+                /*CODIGO*/ 8, "src\\Imagenes\\Peliculas\\Los_croods.jpg", "src\\Peliculas\\Los_croods.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p8);
 
-        //INSTANCIAMOS LA PELICULA "El proyecto de la bruja de Blair"
-        String[] elenco9 = {"HEATHER DONAHUE", "MICHAEL C. WILLIAMS", "JOSHUA LEONARD", "PATRICIA DECOU",
-             "BOB GRIFFITH", "JIM KING", "SANDRA SANCHEZ", "ED SWANSON"};
-        Pelicula p9 = new Pelicula( /*TITULO*/"El proyecto de la bruja de Blair",
-                /*DIRECTOR*/ "Daniel Myrick",
+        //INSTANCIAMOS LA PELICULA "Cuidado con lo que deseas" /*NUEVO*/
+        String[] elenco9 = {"Fernanda Castillo", "Valery Sais", "Juan Rios", "Ivan Arana",
+             "Ramon Medina", "Miguel Mena Camara", "Juan Menchaca", "Hector Holten"};
+        Pelicula p9 = new Pelicula( /*TITULO*/"Cuidado con lo que deseas",
+                /*DIRECTOR*/ "Agustin Tapia",
                 /*GENERO*/ "TERROR",
-                /*AÑO DE ESTRENO*/ 1999,
-                /*EDAD APTA*/ 18,
-                /*SINOPSIS*/ "Tres estudiantes de cine se pierden en un bosque habitado por una bruja, "
-                + "durante su investigación de la leyenda.",
+                /*AÑO DE ESTRENO*/ 2020,
+                /*EDAD APTA*/ 16,
+                /*SINOPSIS*/ "Una pequeña niña recibe como regalo de cumpleaños un bufón que magicamente le revela el oscuro comportamiento"
+                + "secreto de sus padres y su tío.",
                 /*CAST*/ elenco9,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 86,
+                /*DURACION*/ 78,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 9, "src\\Imagenes\\Peliculas\\El proyecto de la bruja de Blair.jpg", "src\\Peliculas\\El proyecto de la bruja de Blair.mp4");
+                /*CODIGO*/ 9, "src\\Imagenes\\Peliculas\\Cuidado_deseas.jpg", "src\\Peliculas\\Cuidado_deseas.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p9);
 
-        //INSTANCIAMOS LA PELICULA "El rey león"
-        String[] elenco10 = {"Matthew Broderick", "James Earl Jones", "Jeremy Irons", "Moira Kelly",
-             "Nathan Lane", "Ernie Sabella", "Robert Guillaume", "Rowan Atkinson"};
-        Pelicula p10 = new Pelicula( /*TITULO*/"El rey león",
-                /*DIRECTOR*/ "Rob Minkoff",
+        //INSTANCIAMOS LA PELICULA "Rango" /*NUEVO*/
+        String[] elenco10 = {"Johnny Depp", "Isla Fisher", "Abigail Breslin", "Alfred Molina",
+             "Bill Nighy", "Stephen Roota", "Harry Dean Stanton", "Timothy Olyphant"};
+        Pelicula p10 = new Pelicula( /*TITULO*/"Rango",
+                /*DIRECTOR*/ "Gore Verbinski",
                 /*GENERO*/ "ANIMACIÓN",
-                /*AÑO DE ESTRENO*/ 1994,
-                /*EDAD APTA*/ 6,
-                /*SINOPSIS*/ "Tras la muerte de su padre, Simba vuelve a enfrentar a su malvado tío, Scar, y reclamar el trono de rey.",
+                /*AÑO DE ESTRENO*/ 2011,
+                /*EDAD APTA*/ 7,
+                /*SINOPSIS*/ "El camaleón mascota Rango se pierde en el desierto. Para sobrevivir finger ser un tipo rudo, y eso lo lleva a"
+                +"\nconvertirse en el comisario de un pueblo fronterizo sin ley.",
                 /*CAST*/ elenco10,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 46,
+                /*DURACION*/ 109,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 10, "src\\Imagenes\\Peliculas\\El rey león.jpg", "src\\Peliculas\\El rey león.mp4");
+                /*CODIGO*/ 10, "src\\Imagenes\\Peliculas\\Rango.jpg", "src\\Peliculas\\Rango.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p10);
 
-        //INSTANCIAMOS LA PELICULA "Scary Movie"
-        String[] elenco11 = {"Anna Faris", "Regina Hall", "Dave Sheridan", "Jon Abrahams",
-             "Shawn Wayans", "Marlon Wayans", "Shannon Elizabeth", "Lochlyn Munro"};
-        Pelicula p11 = new Pelicula( /*TITULO*/"Scary Movie",
-                /*DIRECTOR*/ "Keenen Ivory Wayans",
+        //INSTANCIAMOS LA PELICULA "Nadie sale con vida" /¨NUEVO*/
+        String[] elenco11 = {"Cristian Rodlo", "Marc Menchara", "David Figlioli", "David Barrera",
+             "Moronke Akinola"};
+
+        Pelicula p11 = new Pelicula( /*TITULO*/"Nadie sale con vida",
+                /*DIRECTOR*/ "Santiago Menghini",
                 /*GENERO*/ "TERROR",
-                /*AÑO DE ESTRENO*/ 2013,
-                /*EDAD APTA*/ 18,
-                /*SINOPSIS*/ "La saga de Scary Movie es una serie de películas estadounidenses de comedia especializada en \"burlarse\" "
-                + "\nde las películas populares de terror, que han recaudado más de $896 millones en la taquilla en todo el mundo.",
+                /*AÑO DE ESTRENO*/ 2021,
+                /*EDAD APTA*/ 16,
+                /*SINOPSIS*/ "Desesperada y sin documentos, una mujer proveniente de México se muda a una deteriorada pension en Cleveland,"
+                + "\ndonde empieza a tener extrañas y perturbadoras visiones.",
                 /*CAST*/ elenco11,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 88,
+                /*DURACION*/ 87,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 11, "src\\Imagenes\\Peliculas\\Scary Movie.jpg", "src\\Peliculas\\Scary Movie.mp4");
+                /*CODIGO*/ 11, "src\\Imagenes\\Peliculas\\Nadie_sale_con_vida.jpg", "src\\Peliculas\\Nadie_sale_con_vida.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p11);
 
-        //INSTANCIAMOS LA PELICULA "Bob Esponja: al rescate"
-        String[] elenco12 = {"Tom Kenny", "Bill Fagerbakke", "Rodger Bumpass", "Clancy Brown",
-             "Carolyn Lawrence", "Doug Lawrence", "Keanu Reeves", "Matt Berry"};
-        Pelicula p12 = new Pelicula( /*TITULO*/"Bob Esponja: al rescate",
-                /*DIRECTOR*/ "Tim Hill",
-                /*GENERO*/ "ANIMACIÓN",
-                /*AÑO DE ESTRENO*/ 2013,
+
+
+
+        //INSTANCIAMOS LA PELICULA "Misión al rescate" /*NUEVO*/
+        String[] elenco12 = {"Chris Hemsworth", "Rudhraksh Jaiswal", "Randeep Hooda", "Golshifter Farahani",
+             "Pankaj Tripathi", "David Harbour"};
+        Pelicula p12 = new Pelicula( /*TITULO*/"Misión al rescate",
+                /*DIRECTOR*/ "Sam Hargrave",
+                /*GENERO*/ "ACCIÓN",
+                /*AÑO DE ESTRENO*/ 2020,
                 /*EDAD APTA*/ 12,
-                /*SINOPSIS*/ "Bob Esponja y Patricio se embarcan en una aventura épica. Durante una misión heroica e hilarante para salvar a la mascota de Bob, "
-                + "\nel caracol Gary, descubren que nada es más fuerte que el poder de la amistad.",
+                /*SINOPSIS*/ "La misión de un agerrido mercenario se convierte en una introspectiva carrera de supervivencia cuando lo"
+                + "\nenvían a Bangladés a rescatar al hijo de un narco.",
                 /*CAST*/ elenco12,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 103,
+                /*DURACION*/ 117,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 12, "src\\Imagenes\\Peliculas\\Bob Esponja al rescate.jpg", "src\\Peliculas\\Bob Esponja - al rescate.mp4");
+                /*CODIGO*/ 12, "src\\Imagenes\\Peliculas\\Mision_al_rescate.jpg", "src\\Peliculas\\Mision_al_rescate.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p12);
 
-        //INSTANCIAMOS LA PELICULA "¡Scooby!"
-        String[] elenco13 = {"Don Messick", "Casey Kasem", "Frank Welker", "Nicole Jaffe", "Stefanianna Christopherson"};
-        Pelicula p13 = new Pelicula( /*TITULO*/"¡Scooby!",
-                /*DIRECTOR*/ "Makoto Shinkai",
-                /*GENERO*/ "ANIMACIÓN",
-                /*AÑO DE ESTRENO*/ 2020,
+
+
+        //INSTANCIAMOS LA PELICULA "El protector" /*NUEVO*/
+        String[] elenco13 = {"Liam Neeson", "Katheryn Winnick", "Juan Pablo Raba", "Teresa Ruiz", "Jacob Perez", "Dylan Kenin"};
+        Pelicula p13 = new Pelicula( /*TITULO*/"El protector",
+                /*DIRECTOR*/ "Robert Lorenz",
+                /*GENERO*/ "ACCIÓN",
+                /*AÑO DE ESTRENO*/ 2021,
                 /*EDAD APTA*/ 6,
-                /*SINOPSIS*/ "Con cientos de casos resueltos y aventuras compartidas, Scooby y la pandilla se enfrentan al misterio más grande "
-                + "\ny desafiante de todos los tiempos: un complot para liberar al aterrador perro fantasma Cerbero en el mundo de los vivos.",
+                /*SINOPSIS*/ "Un exmarine y ganadero de Arizona deja un rastro sangriento cuando se convierte en el protector de un niño"
+                + "\nque huye de unos narcotraficantes asesinos.",
                 /*CAST*/ elenco13,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 22,
+                /*DURACION*/ 107,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 13, "src\\Imagenes\\Peliculas\\Scooby.jpg", "src\\Peliculas\\¡Scooby!.mp4");
+                /*CODIGO*/ 13, "src\\Imagenes\\Peliculas\\El_protector.jpg", "src\\Peliculas\\El_protector.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p13);
 
-        //INSTANCIAMOS LA PELICULA "Juego del miedo"
-        String[] elenco14 = {"Miyu Irino", "Kana Hanazawa", "Takeshi Maeda", "Yuka Terasaki",
-             "Fumi Hirano", "Mikako Komatsu", "Suguru Inoue", "Megumi Han"};
-        Pelicula p14 = new Pelicula( /*TITULO*/"Juego del miedo",
-                /*DIRECTOR*/ "James Wan",
-                /*GENERO*/ "TERROR",
-                /*AÑO DE ESTRENO*/ 2004,
-                /*EDAD APTA*/ 18,
-                /*SINOPSIS*/ "Adam y Lawrence se despiertan encadenados en un baño infecto con un cadáver entre ellos. Su secuestrador es un maniaco, cuyo juego consiste "
-                + "\nen forzar a sus cautivos a herirse a sí mismos o a otros para permanecer vivos.",
+
+
+        //INSTANCIAMOS LA PELICULA "Triple frontera" /*NUEVO*/
+        String[] elenco14 = {"Ben Affleck", "Oscar Isaac", "Charlie Hunnam", "Pedro Pascal",
+             "Garrett Hedlund", "Adria Arjona"};
+        Pelicula p14 = new Pelicula( /*TITULO*/"Triple frontera",
+                /*DIRECTOR*/ "J.C. Chandor",
+                /*GENERO*/ "ACCIÓN",
+                /*AÑO DE ESTRENO*/ 2019,
+                /*EDAD APTA*/ 16,
+                /*SINOPSIS*/ "Cinco exsoldados de operaciones especiales ponen la mira en la fortuna oculta de un campo de narcotrafico."
+                + "\nNo hay vuelta atras.",
                 /*CAST*/ elenco14,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 111,
+                /*DURACION*/ 125,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 14, "src\\Imagenes\\Peliculas\\Juego del miedo.jpg", "src\\Peliculas\\Juego del miedo.mp4");
+                /*CODIGO*/ 14, "src\\Imagenes\\Peliculas\\Triple_frontera.jpg", "src\\Peliculas\\Triple_frontera.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p14);
 
-        //INSTANCIAMOS LA PELICULA "Juegos demoníacos"
-        String[] elenco15 = {"Jennifer Armour", "Jeremy Isabella", "Alina Golovlyova", "Paul S. Tracey"};
-        Pelicula p15 = new Pelicula( /*TITULO*/"Juegos demoníacos",
-                /*DIRECTOR*/ "Petr Jákl",
-                /*GENERO*/ "TERROR",
-                /*AÑO DE ESTRENO*/ 2015,
-                /*EDAD APTA*/ 18,
-                /*SINOPSIS*/ "Tres cineastas viajan a Ucrania para investigar las historias de canibalismo que se produjeron durante la hambruna de 1932."
-                + "\nSin embargo, la experiencia se vuelve aterradora cuando quedan a merced del espíritu del peor asesino de la historia del país.",
+        //INSTANCIAMOS LA PELICULA "Alerta roja" /*NUEVO*/
+        String[] elenco15 = {"Dwayne Johnson", "Ryan Reynolds", "Gal Gadot", "Ritu Arya", "Crris Diamantopoulos"};
+        Pelicula p15 = new Pelicula( /*TITULO*/"Alerta roja",
+                /*DIRECTOR*/ "Rawson Marshall Thurber",
+                /*GENERO*/ "ACCION",
+                /*AÑO DE ESTRENO*/ 2021,
+                /*EDAD APTA*/ 13,
+                /*SINOPSIS*/ "A regañadientes, un perfilador del FBI hace equipo con el ladrón de arte mas buscado del mundo para atrapar a"
+                + "\nuna delincuente que siempre consigue ir un paso por delante.",
                 /*CAST*/ elenco15,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 86,
+                /*DURACION*/ 117,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 15, "src\\Imagenes\\Peliculas\\Juegos demoníacos.jpg", "src\\Peliculas\\Juegos demoníacos.mp4");
+                /*CODIGO*/ 15, "src\\Imagenes\\Peliculas\\Alerta_roja.jpg", "src\\Peliculas\\Alerta_roja.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p15);
 
-        //INSTANCIAMOS LA PELICULA "Losing Alice"
-        String[] elenco16 = {"Lihi Kornowski", "Ayelet Zurer", "Gal Toren", "Chelli Goldenberg"};
-        Pelicula p16 = new Pelicula( /*TITULO*/"Losing Alice",
+
+
+        //INSTANCIAMOS LA PELICULA "Paternidad" /*NUEVO*/
+        String[] elenco16 = {"Kevin Hart", "Alfre Woodard", "Lil Rel Howery", "DeWanda Wise", 
+             "Frankie Faison", "Anthony Carrigan","Paul Reiser"};
+
+        Pelicula p16 = new Pelicula( /*TITULO*/"Paternidad",
                 /*DIRECTOR*/ "Makoto Shinkai",
                 /*GENERO*/ "DRAMA",
                 /*AÑO DE ESTRENO*/ 2021,
                 /*EDAD APTA*/ 18,
-                /*SINOPSIS*/ "Se trata de Losing Alice, donde la veterana directora Sigal Avin nos pone en medio de la discordia de pareja entre "
-                + "\nAlice (Ayelet Zurer) y su esposo David (Gal Toren), ambos seducidos por la personalidad y el talento de una joven guionista llamada Sophie (Lihi Kornowski).",
+                /*SINOPSIS*/ "Un papá y viudo les hace frente a las dudas, los miedos, el dolor y los pañakes sucios al criar a su hija por"
+                + "\nsu cuenta. Inspirada en una historia real.",
                 /*CAST*/ elenco16,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 60,
+                /*DURACION*/ 110,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 16, "src\\Imagenes\\Peliculas\\Losing Alice.jpg", "src\\Peliculas\\Losing Alice.mp4");
+                /*CODIGO*/ 16, "src\\Imagenes\\Peliculas\\Paternidad.jpg", "src\\Peliculas\\Paternidad.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p16);
 
-        //INSTANCIAMOS LA PELICULA "Siempre a tu lado"
-        String[] elenco17 = {"Richard Gere", "Joan Allen", "Cary-Hiroyuki Tagawa", "Sarah Roemer",
-             "Jason Alexander", "Erick Avari", "Davenia McFadden", "Kevin DeCoste"};
-        Pelicula p17 = new Pelicula( /*TITULO*/"Siempre a tu lado",
-                /*DIRECTOR*/ "Lasse Hallström",
-                /*GENERO*/ "DRAMA",
-                /*AÑO DE ESTRENO*/ 2009,
-                /*EDAD APTA*/ 12,
-                /*SINOPSIS*/ "Un perro fiel llamado Hachiko acompaña cada mañana a su amo a la estación de tren "
-                + "y regresa cada tarde para darle la bienvenida después del trabajo. Sin embargo, esta rutina se ve rota por una desgracia.",
+
+
+        //INSTANCIAMOS LA PELICULA "Paul" /*NUEVO*/
+        String[] elenco17 = {"Simon Pegg", "Nick Frost", "Seth Rogen", "Jason Bateman",
+             "Kristen Wiig", "Bill Hader", "Blythe Danner", "Joe Lo Truglio", "Dylan O'Brien"};
+
+        Pelicula p17 = new Pelicula( /*TITULO*/"Paul",
+                /*DIRECTOR*/ "Greg Mottola",
+                /*GENERO*/ "COMEDIA",
+                /*AÑO DE ESTRENO*/ 2011,
+                /*EDAD APTA*/ 16,
+                /*SINOPSIS*/ "Dos fanaticos de la ciencia ficción, en pos de descubrir que hay en el interior de la infame Área 51 en Nevada,"
+                + "se topan con un extraterrestre que está huyendo.",
                 /*CAST*/ elenco17,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 93,
+                /*DURACION*/ 103,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 17, "src\\Imagenes\\Peliculas\\Siempre a tu lado.jpg", "src\\Peliculas\\Siempre a tu lado.mp4");
+                /*CODIGO*/ 17, "src\\Imagenes\\Peliculas\\Paul.jpg", "src\\Peliculas\\Paul.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p17);
 
-        //INSTANCIAMOS LA PELICULA "En busca de la felicidad"
-        String[] elenco18 = {"Will Smith", "Jaden Smith", "Thandie Newton", "Brian Howe",
-             "Dan Castellaneta", "James Karen", "Kurt Fuller", "Takayo Fischer"};
-        Pelicula p18 = new Pelicula( /*TITULO*/"En busca de la felicidad",
-                /*DIRECTOR*/ "Gabriele Muccino",
+
+
+        //INSTANCIAMOS LA PELICULA "No manches Frida" /*NUEVO*/
+        String[] elenco18 = {"Omar Chaparro", "Martha Higareda", "Monica Dionne", "Rocio Garcia",
+             "Regina Pavon", "Mario Moran", "Fernando Castillo", "Pamela Moreno"};
+
+        Pelicula p18 = new Pelicula( /*TITULO*/"No manches Frida",
+                /*DIRECTOR*/ "Nacho G. Venilla",
                 /*GENERO*/ "DRAMA",
-                /*AÑO DE ESTRENO*/ 2013,
-                /*EDAD APTA*/ 12,
-                /*SINOPSIS*/ "La vida es una lucha para Chris Gardner. Expulsado de su apartamento, él y su joven hijo se encuentran solos sin ningún lugar a donde ir. "
-                + "A pesar de que Chris eventualmente consigue trabajo como interno en una prestigiada firma financiera, "
-                + "la posición no le da dinero. El dúo debe vivir en un albergue y enfrentar muchas dificultades, "
-                + "pero Chris no se da por vencido y lucha por conseguir una vida mejor para él y su hijo.",
+                /*AÑO DE ESTRENO*/ 2016,
+                /*EDAD APTA*/ 13,
+                /*SINOPSIS*/ "Apenas sale de prisión, un exconvicto toma un trabajo como maestro sustituto en una escuela. La misma"
+                + "/nescuela donde tiene escondido un gran botín",
                 /*CAST*/ elenco18,
                 /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 117,
+                /*DURACION*/ 114,
                 /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 18, "src\\Imagenes\\Peliculas\\En busca de la felicidad.jpg", "src\\Peliculas\\En busca de la felicidad.mp4");
+                /*CODIGO*/ 18, "src\\Imagenes\\Peliculas\\Frida.jpg", "src\\Peliculas\\Frida.mp4");
 
         Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p18);
 
-        //INSTANCIAMOS LA PELICULA "Forrest Gump"
-        String[] elenco19 = {"Tom Hanks", "Robin Wright", "Gary Sinise", "Sally Field",
-             "Haley Joel Osment", "Peter Dobson", "Dick Cavett", "Sam Anderson"};
-        Pelicula p19 = new Pelicula( /*TITULO*/"Forrest Gump",
-                /*DIRECTOR*/ "Robert Zemeckis",
-                /*GENERO*/ "DRAMA",
-                /*AÑO DE ESTRENO*/ 2013,
-                /*EDAD APTA*/ 12,
-                /*SINOPSIS*/ "Forrest Gump, un joven sureño, tenaz e inocente, "
-                + "es protagonista de acontecimientos cruciales en la historia de los Estados Unidos.",
-                /*CAST*/ elenco18,
-                /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 142,
-                /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 19, "src\\Imagenes\\Peliculas\\Forrest Gump.jpg", "src\\Peliculas\\Forrest Gump.mp4");
-
-        Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p19);
-
-        //INSTANCIAMOS LA PELICULA "5 centímetros por segundo"
-        String[] elenco20 = {"Kenji Mizuhashi", "Yoshimi Kondō", "Satomi Hanamura"};
-        Pelicula p20 = new Pelicula( /*TITULO*/"5 centímetros por segundo",
-                /*DIRECTOR*/ "Makoto Shinkai",
-                /*GENERO*/ "ANIMACIÓN",
-                /*AÑO DE ESTRENO*/ 2007,
-                /*EDAD APTA*/ 12,
-                /*SINOPSIS*/ "5 centímetros por segundo​​ es una película de animación japonesa dirigida por Makoto Shinkai. La película se finalizó el 22 de enero de 2007. "
-                + "La primera parte de la película se estrenó en Yahoo! Japón para miembros exclusivos desde el 16 al 19 de febrero de 2007.",
-                /*CAST*/ elenco19,
-                /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 64,
-                /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 20, "src\\Imagenes\\Peliculas\\5 centímetros por segundo.jpg", "src\\Peliculas\\5 centímetros por segundo.mp4");
-
-        Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p20);
-
-        //INSTANCIAMOS LA PELICULA "Pesadilla en Elm Street"
-        String[] elenco21 = {"Heather Langenkamp", "John Saxon", "Ronee Blakley", "Amanda Wyss",
-             "Jsu García", "Johnny Depp", "Charles Fleischer", "Robert Englund"};
-        Pelicula p21 = new Pelicula( /*TITULO*/"Pesadilla en Elm Street",
-                /*DIRECTOR*/ "Wes Craven",
-                /*GENERO*/ "TERROR",
-                /*AÑO DE ESTRENO*/ 1984,
-                /*EDAD APTA*/ 18,
-                /*SINOPSIS*/ "Un grupo de adolescentes sufre unas pesadillas horrendas en las que un ser deforme que porta garras de acero los persigue. "
-                + "Lo más inquietante es que los hechos empiezan a sugerir que lo que ocurre mientras sueñan repercute en la vida real.",
-                /*CAST*/ elenco21,
-                /*ESTADO DE VISUALIZACION*/ false,
-                /*DURACION*/ 91,
-                /*MINUTOS REPRODUCIDOS*/ 0,
-                /*CODIGO*/ 21, "src\\Imagenes\\Peliculas\\Pesadilla en Elm Street.jpg", "src\\Peliculas\\Pesadilla en Elm Street.mp4");
-
-        Modelo.Multimedia.catalogoPeliculas.agregarPelicula(p21);
 
         for (Pelicula p : Multimedia.catalogoPeliculas.getPeliculas()) {
             Video v = p;

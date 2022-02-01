@@ -13,7 +13,6 @@ public class Cuenta implements Serializable {
     private Tarjeta tarjeta;
     private Boolean sesion;
     private ArregloVisualizaciones visualizaciones;
-    private int numeroPantallasActuales;
 
     /*===========
       Constructor

@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
         //INSTANCIAMOS UNA VARIABLE DEL TIPO ARREGLO CUENTAS
         ArregloCuentas Cuentas = new ArregloCuentas();
-
+        
         //Creamos una cuenta para poder testear el programa.
         Cuentas.agregarCuenta(Cuentas.crearCuenta(new Usuario("franco@gmail.com", "franco@gmail.com", "994421210"),
                 new Tarjeta("Fran", "Co", "4895045575702316", "25/12", 123),
